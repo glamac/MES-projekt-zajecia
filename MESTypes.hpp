@@ -1,26 +1,35 @@
 #include <string>
+#include <vector>
+#include "MESCore.hpp"
+
 namespace MES {
-	typedef double real_t;
+
 	struct node {
 		real_t x;
 		real_t y;
 	};
+
 	struct element {
 		int ID[4];
 	};
+
 	struct grid {
-		const int numNodes;
-		const int numElements;
-		element *Element;
-		node *Node;
+		int numNodes;
+		int numElements;
+        std::vector<element> Element;
+        std::vector<node> Node;
 		grid(const int nN, const int nE) : numNodes(nN), numElements(nE) {
-			Element = new element[nE];
-			Node = new node[nN];
+            Element.resize(nE);
+            Node.resize(nN);
 		};
+        grid() : grid(0,0) {};
+        void setNodes(int nN) {numNodes = nN;};
+        void setElems(int nE) {numElements = nE;};
+        ~grid() {
+        }
 	};
 	
-	bool parseTextFile(grid *Grid, std::string Filename);
-	void parserHandeLine(grid *Grid, std::string Line);
+	grid parseTextFile(std::string Filename);
 
 	struct globalData {
 		real_t SimulationTime;
@@ -31,8 +40,10 @@ namespace MES {
 		real_t InitialTemp;
 		real_t Density;
 		real_t SpecificHeat;
-		const int numNodes;
-		const int numElements;
+		int numNodes;
+		int numElements;
 	};
-
 }
+
+extern MES::globalData GLOB;
+
