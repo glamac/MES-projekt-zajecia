@@ -1,13 +1,9 @@
 #include <string>
 #include <vector>
 #include "MESCore.hpp"
+#include "MESCalculus.hpp"
 
 namespace MES {
-
-	struct node {
-		real_t x;
-		real_t y;
-	};
 
 	struct element {
 		int ID[4];
