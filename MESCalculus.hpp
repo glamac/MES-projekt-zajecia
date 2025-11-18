@@ -18,13 +18,13 @@ namespace MES {
         real_t static integrate(integrable2D ff, int numPoints = 3) {
             return _integrate2D(ff, numPoints);
         };
-    
+
     private:
-		real_t static _integrate1D(integrable1D ff, int numPoints = 3);
-    real_t static _integrate2D(integrable2D ff, int numPoints = 3);
+    	real_t static _integrate1D(integrable1D ff, int numPoints = 3);
+        real_t static _integrate2D(integrable2D ff, int numPoints = 3);
 	};
 
-    node getIntegrationPointForSide(int side);
+    node getIntegrationPointForSide(int n, int side);
     node getIntegrationPoint(int n);
     node getIntegrationPointWeight(int n);
 

@@ -10,8 +10,8 @@ MES::real_t MES::CalculusHelper::_integrate1D(integrable1D ff, int numPoints) {
     real_t sum = 0.0;
     numPoints--;
     for(int i = 0; i <= numPoints; i++) {
-        sum += 
-            GaussQuadratureTables::point_weight[numPoints][i] * 
+        sum +=
+            GaussQuadratureTables::point_weight[numPoints][i] *
             ff(GaussQuadratureTables::point_x[numPoints][i]);
         #ifdef DEBUG
         printf("\ni: %i, weight: %lf, x: %lf, w*ff(x): %lf",
@@ -32,10 +32,10 @@ MES::real_t MES::CalculusHelper::_integrate2D(integrable2D ff, int numPoints) {
     numPoints--;
     for(int i = 0; i <= numPoints; i++) {
         for(int j = 0 ; j <= numPoints; j++) {
-            sum += 
+            sum +=
                 GaussQuadratureTables::point_weight[numPoints][i] * GaussQuadratureTables::point_weight[numPoints][j] *
                 ff(GaussQuadratureTables::point_x[numPoints][i], GaussQuadratureTables::point_x[numPoints][j]);
-            #ifdef DEBUG 
+            #ifdef DEBUG
             printf("\ni: %i, j: %i, weight i: %lf, weight j: %lf, x: %lf, y: %lf w*ff(x): %lf",
                 i, j, GaussQuadratureTables::point_weight[numPoints][i], GaussQuadratureTables::point_weight[numPoints][j],
                 GaussQuadratureTables::point_x[numPoints][i], GaussQuadratureTables::point_x[numPoints][j],
@@ -45,7 +45,7 @@ MES::real_t MES::CalculusHelper::_integrate2D(integrable2D ff, int numPoints) {
             #endif
         }
     }
-    #ifdef DEBUG 
+    #ifdef DEBUG
     printf("\n");
     #endif
     return sum;
@@ -65,6 +65,31 @@ MES::node MES::getIntegrationPoint(int n) {
     }
     return MES::node{0,0};
 }
+
+MES::node MES::getIntegrationPointForSide(int n, int side) {
+    MES::node ret = MES::node{0, 0};
+    ret = MES::node {
+        MES::GaussQuadratureTables::point_x[INTEGRATION_POINTS-1][n],
+        MES::GaussQuadratureTables::point_x[INTEGRATION_POINTS-1][n]
+    };
+    switch(side) {
+        case 0: // dolny bok
+            ret.eta = -1;
+        break;
+        case 1: // prawy bok
+            ret.ksi = 1;
+        break;
+        case 2: // górny bok
+            ret.eta = 1;
+        break;
+        default: // lewy bok
+            ret.ksi = -1;
+        break;
+    }
+
+    return ret;
+}
+
 
 MES::node MES::getIntegrationPointWeight(int n) {
     int k = 0;

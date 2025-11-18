@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 
 #include "MESCore.hpp"
@@ -37,7 +38,7 @@ MES::Jakobian jacobian(MES::grid& A, MES::node p1, int element = 0) {
         MSF::dEta::N3(p1.ksi) * A.Node[A.Element[element].ID[2]].y +
         MSF::dEta::N4(p1.ksi) * A.Node[A.Element[element].ID[3]].y
     };
-    
+
     j.detJ = j.J[0, 0] * j.J[1, 1] - j.J[0, 1]*j.J[1, 0];
 
     j.J1[0, 0] = j.J[1, 1];
@@ -46,7 +47,7 @@ MES::Jakobian jacobian(MES::grid& A, MES::node p1, int element = 0) {
     j.J1[1, 1] = j.J[0, 0];
 
     j.J1 *= 1/j.detJ;
-    
+
     return j;
 
 }
@@ -107,7 +108,7 @@ int main() {
     std::cout << "---- dN/dKsi\n";
     for(int i = 0; i < INTEGRATION_POINTS*INTEGRATION_POINTS; i++) {
         printf("pc%i:  %.5lf  %.5lf  %.5lf  %.5lf\n",
-            i, 
+            i,
             MES::ShapeFunctions::dKsi::N1(MES::getIntegrationPoint(i).eta),
             MES::ShapeFunctions::dKsi::N2(MES::getIntegrationPoint(i).eta),
             MES::ShapeFunctions::dKsi::N3(MES::getIntegrationPoint(i).eta),
@@ -117,7 +118,7 @@ int main() {
     std::cout << "---- dN/dEta\n";
     for(int i = 0; i < INTEGRATION_POINTS*INTEGRATION_POINTS; i++) {
         printf("pc%i:  %.5lf  %.5lf  %.5lf  %.5lf\n",
-            i, 
+            i,
             MES::ShapeFunctions::dEta::N1(MES::getIntegrationPoint(i).ksi),
             MES::ShapeFunctions::dEta::N2(MES::getIntegrationPoint(i).ksi),
             MES::ShapeFunctions::dEta::N3(MES::getIntegrationPoint(i).ksi),
@@ -128,7 +129,7 @@ int main() {
     printf("numElements: %u", GLOB.numElements);
 
     MES::Matrix<16, 16> H_glob;
-    
+
     for(int j = 0; j < GLOB.numElements; j++) {
         MES::Matrix<4, 4> H;
         for(int i = 0; i < INTEGRATION_POINTS*INTEGRATION_POINTS; i++) {
@@ -149,7 +150,7 @@ int main() {
                 dN_dxdy[3][1, 0]
             };
 
-            auto H_i = 
+            auto H_i =
                 (dNdx * dNdx.transpose() + dNdy * dNdy.transpose());
             H_i *= (k.detJ * GLOB.Conductivity);
             H = H + H_i * (weight.x * weight.y);
@@ -171,13 +172,44 @@ int main() {
 
     auto& el = A.Element[0];
     auto& nodeVec = el.ID;
-    for(int i = 0, j = 1; i < 4; ++i, j=(j+1)%4) {
-        auto n1 = nodeVec[(i+2)%4], n2 = nodeVec[(j+2)%4];
-        printf("Node-y boku %u: %i, %i\n", i, n1+1, n2+1);
-        auto e = MES::getIntegrationPoint(i);
-        std::cout << e.ksi << " " <<  e.eta << std::endl;
-    }
 
-    
+    using MSF = MES::ShapeFunctions;
+    MES::Matrix<4, 4> H_BC;
+    for(int i = 0; i < 4; i++) {
+        auto index1 = (i+2)%4, index2 = (i+3)%4;
+        auto n1 = nodeVec[index1], n2 = nodeVec[index2];
+        // no boundary condition
+        if (!el.Node[index1]->BC || !el.Node[index2]->BC)
+            continue;
+        printf("Node-y boku %u: %i, %i\n", i, n1+1, n2+1);
+        printf("%i, %i\n", el.Node[index1]->BC, el.Node[index2]->BC);
+        MES::Matrix<4, 4> H_BC_L;
+        for(int j = 0; j < INTEGRATION_POINTS; j++) {
+            auto pc = MES::getIntegrationPointForSide(j, i);
+            std::cout << pc.x << " | " << pc.y << " | " << j << std::endl;
+            MES::Matrix<4, 1> N = {
+                MSF::N1(pc.ksi, pc.eta),
+                MSF::N2(pc.ksi, pc.eta),
+                MSF::N3(pc.ksi, pc.eta),
+                MSF::N4(pc.ksi, pc.eta),
+            };
+            std::cout << "N:" << N << std::endl;
+            auto weight = MES::GaussQuadratureTables::point_weight[INTEGRATION_POINTS-1][j];
+            H_BC_L = H_BC_L + weight * (N * N.transpose());
+        }
+        auto p1 = el.Node[index1], p2 = el.Node[index2];
+        // multiply by determinant (which is just length over 2)
+        auto detJ = (std::sqrt(
+            std::pow(p1->x - p2->x, 2) +
+            std::pow(p1->y - p2->y, 2)
+        ) )/ 2.0;
+        H_BC_L *= GLOB.Alpha * detJ;
+        std::cout << detJ << std::endl;
+        H_BC = H_BC + H_BC_L;
+        std::cout << H_BC_L << std::endl;
+    }
+    std::cout << H_BC << std::endl;
+
+
 
 }
