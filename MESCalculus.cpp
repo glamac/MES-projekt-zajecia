@@ -4,6 +4,7 @@
 #include "MESCore.hpp"
 #ifdef DEBUG
 #include <iostream>
+#include <ostream>
 #endif
 MES::real_t MES::CalculusHelper::_integrate1D(integrable1D ff, int numPoints) {
     real_t sum = 0.0;
@@ -62,6 +63,22 @@ MES::node MES::getIntegrationPoint(int n) {
             }
         }
     }
+    return MES::node{0,0};
+}
+
+MES::node MES::getIntegrationPointWeight(int n) {
+    int k = 0;
+    for(int i = 0; i < INTEGRATION_POINTS; i++) {
+        for(int j = 0; j < INTEGRATION_POINTS; j++) {
+            if(k++ >= n) {
+                return MES::node{
+                    MES::GaussQuadratureTables::point_weight[INTEGRATION_POINTS-1][i],
+                    MES::GaussQuadratureTables::point_weight[INTEGRATION_POINTS-1][j]
+                };
+            }
+        }
+    }
+    return MES::node{0,0};
 }
 
 MES::real_t MES::ShapeFunctions::N1(real_t ksi, real_t eta) {
@@ -76,7 +93,6 @@ MES::real_t MES::ShapeFunctions::N3(real_t ksi, real_t eta) {
 MES::real_t MES::ShapeFunctions::N4(real_t ksi, real_t eta) {
     return 0.25 * (1 - ksi) * (1 + eta);
 }
-
 MES::real_t MES::ShapeFunctions::dKsi::N1(real_t eta) {
     return -0.25 * (1 - eta);
 };

@@ -1,13 +1,8 @@
 #include <string>
 #include <vector>
 #include "MESCore.hpp"
-#include "MESCalculus.hpp"
 
 namespace MES {
-
-	struct element {
-		int ID[4];
-	};
 
 	struct grid {
 		int numNodes;
@@ -21,11 +16,10 @@ namespace MES {
         grid() : grid(0,0) {};
         void setNodes(int nN) {numNodes = nN;};
         void setElems(int nE) {numElements = nE;};
-        ~grid() {
-        }
+		
 	};
 	
-	grid parseTextFile(std::string Filename);
+	void parseTextFile(grid& SimulationGrid, std::string Filename);
 
 	struct globalData {
 		real_t SimulationTime;

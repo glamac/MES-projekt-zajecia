@@ -4,7 +4,7 @@
 
 #include "MESCore.hpp"
 #include "MESGaussQuadratures.h"
-
+#include "MESMatrix.hpp"
 
 
 namespace MES {
@@ -21,10 +21,12 @@ namespace MES {
     
     private:
 		real_t static _integrate1D(integrable1D ff, int numPoints = 3);
-        real_t static _integrate2D(integrable2D ff, int numPoints = 3);
+    real_t static _integrate2D(integrable2D ff, int numPoints = 3);
 	};
 
+    node getIntegrationPointForSide(int side);
     node getIntegrationPoint(int n);
+    node getIntegrationPointWeight(int n);
 
     struct ShapeFunctions {
         real_t static N1(real_t ksi, real_t eta);
@@ -46,8 +48,8 @@ namespace MES {
     };
 
     struct Jakobian {
-        real_t J[2][2];
-        real_t J1[2][2];
+        Matrix<2, 2> J;
+        Matrix<2, 2> J1;
         real_t detJ;
     };
 }
