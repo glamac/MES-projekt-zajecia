@@ -3,3 +3,4 @@ test.o
 MESJacobian.asm
 a.out
 test.cpp
+.zed/
