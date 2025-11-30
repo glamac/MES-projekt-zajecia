@@ -21,9 +21,21 @@ namespace MES {
             }
         }
 
+        constexpr Matrix(MES::real_t A) {
+            for(int i = 0; i < matRows; i++) {
+                for(int j = 0; j < matCols; j++) {
+                    matrix[i][j] = A;
+                }
+            }
+        }
+
         constexpr Matrix(std::initializer_list<MES::real_t> A) {
             if(A.size() == 1) {
-                memset(matrix, A.begin()[0], sizeof matrix);
+                for(int i = 0; i < matRows; i++) {
+                    for(int j = 0; j < matCols; j++) {
+                        matrix[i][j] = A.begin()[0];
+                    }
+                }
                 return;
             }
             for(int i = 0; i < matRows; i++) {
@@ -32,8 +44,8 @@ namespace MES {
                 }
             }
         }
-        
-        constexpr decltype(auto) operator[](this auto& self, size_t row, size_t col) {
+
+        constexpr decltype(auto) operator[](this auto& self, size_t row = 0, size_t col = 0) {
             assert(row < matRows);
             assert(col < matCols);
             return self.matrix[row][col];
@@ -49,6 +61,16 @@ namespace MES {
             return T;
         }
 
+        Matrix<matRows, matCols> operator-() const {
+            Matrix<matCols, matRows> T;
+            for(int i = 0; i < matRows; i++) {
+                for(int j = 0; j < matCols; j++) {
+                    T[j, i] = matrix[i][j] * -1;
+                }
+            }
+            return T;
+        }
+
         Matrix<matRows, matCols>& operator*=(real_t alpha) {
             for(int i = 0; i < matRows; i++) {
                 for(int j = 0; j < matCols; j++) {
@@ -56,6 +78,25 @@ namespace MES {
                 }
             }
             return *this;
+        }
+
+        real_t min() {
+            real_t min = matrix[0][0];
+            for(int i = 0; i < matRows; i++) {
+                for(int j = 0; j < matCols; j++) {
+                    if (matrix[i][j] < min) min = matrix[i][j];
+                }
+            }
+            return min;
+        }
+        real_t max() {
+            real_t max = matrix[0][0];
+            for(int i = 0; i < matRows; i++) {
+                for(int j = 0; j < matCols; j++) {
+                    if (matrix[i][j] > max) max = matrix[i][j];
+                }
+            }
+            return max;
         }
 
         friend std::ostream& operator<<(std::ostream &stream, Matrix<matRows, matCols> mat) {
@@ -112,6 +153,22 @@ namespace MES {
     ) { return rhs * alpha; }
 
 
+    // Matrix / double
+    template<size_t rows, size_t cols>
+    constexpr Matrix<rows, cols> operator/(
+        Matrix<rows, cols> lhs,
+        const real_t &alpha
+    ) {
+        Matrix<rows, cols> ret;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                ret[i, j] = lhs[i, j] / alpha;
+            }
+        }
+        return ret;
+    }
+
+    // Matrix + Matrix
     template<size_t rows, size_t cols>
     constexpr Matrix<rows, cols> operator+(
         Matrix<rows, cols> lhs,
@@ -138,6 +195,62 @@ namespace MES {
             }
         }
         return true;
+    }
+
+    // Matrix - Matrix
+    template<size_t rows, size_t cols>
+    constexpr Matrix<rows, cols> operator-(
+        Matrix<rows, cols> lhs,
+        const Matrix<rows, cols> &rhs
+    ) {
+        Matrix<rows, cols> ret;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                ret[i, j] = lhs[i, j] - rhs[i, j];
+            }
+        }
+        return ret;
+    }
+
+    /// Solves a system of equations
+    /// A * X = B; solves for X
+    template<size_t N>
+    constexpr Matrix<N, 1> gauss (
+        Matrix<N, N> A,
+        Matrix<N, 1> B
+    ) {
+        Matrix<N, N+1> AB;
+        for(int i = 0; i < N; i++) {
+            for(int j = 0; j < N; j++) {
+                AB[i, j] = A[i, j];
+            }
+        }
+        for(int i = 0; i < N; i++) {
+            AB[i, N] = B[i, 0];
+        }
+        double m = 0, s = 0;
+        for(int i = 0; i < N-1; i++) {
+            if(fabs(AB[i, i]) < 1e-12) {
+                std::cout << AB << std::endl << "failed at " << i << " (" << AB[i, i] << ")\n";
+                return Matrix<N, 1>();
+            }
+            for(int j = i+1; j < N; j++) {
+                m = -AB[j, i] / AB[i, i];
+                for(int k = i+1; k <= N; k++) {
+                    AB[j, k] += m * AB[i, k];
+                }
+            }
+        }
+        Matrix <N, 1> X;
+        for(int i = N-1; i >= 0; i--) {
+            s = AB[i, N];
+            for(int j = N-1; j > i; j--) {
+                s -= AB[i, j] * X[j, 0];
+            }
+            X[i, 0] = s / AB[i, i];
+        }
+        std::cout << "Success!\n";
+        return X;
     }
 
 }

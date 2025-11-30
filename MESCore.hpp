@@ -18,6 +18,15 @@ namespace MES {
 	struct element {
 		std::array<int, 4> ID;
 		std::array<MES::node*, 4> Node;
+		bool operator==(MES::element rhs) {
+            for(int i = 0; i < ID.size(); i++) {
+                if (rhs.ID[i] != ID[i]) return false;
+            }
+            return true;
+        }
 	};
 }
+
+
+
 #endif // _MES_CORE_H
