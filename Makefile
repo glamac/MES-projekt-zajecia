@@ -1,8 +1,8 @@
-# modified "juicy make example" 
+# modified "juicy make example"
 # from https://makefiletutorial.com/
 TARGET := main.out
 BUILD_DIR := ./build
-SRC_DIRS := .
+SRC_DIRS := ./src
 SRCS := $(shell find $(SRC_DIRS) -name '*.cpp' -or -name '*.c' -or -name '*.asm')
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 DEPS := $(OBJS:.o=.d)
@@ -12,7 +12,7 @@ CPPFLAGS := $(INC_FLAGS) -MMD -MP -std=c++23 -fPIC
 LDFLAGS := $(shell pkg-config --static --libs glfw3) -fPIE -pie
 
 $(BUILD_DIR)/$(TARGET): $(OBJS)
-	$(CXX) $(OBJS) -o $@ $(LDFLAGS) 
+	$(CXX) $(OBJS) -o $@ $(LDFLAGS)
 
 $(BUILD_DIR)/%.c.o: %.c
 	mkdir -p $(dir $@)
@@ -27,7 +27,7 @@ $(BUILD_DIR)/%.asm.o: %.asm
 	$(CXX) -x assembler-with-cpp -c -fPIC $< -o $@
 
 .PHONY: run
-run: $(BUILD_DIR)/$(TARGET) 
+run: $(BUILD_DIR)/$(TARGET)
 	./$<
 
 .PHONY: clean
