@@ -14,9 +14,8 @@ void MES::parseTextFile(MES::grid& SimulationGrid, std::string Filename) {
 	}
 
 	std::string currline, junk;
-
+	// parsing logic
 	while(std::getline(DataFile, currline)){
-
         std::istringstream lineContent(currline);
         if(currline.starts_with("SimulationTime ")){
             lineContent >> junk >> GLOB.SimulationTime;
@@ -94,7 +93,13 @@ void MES::parseTextFile(MES::grid& SimulationGrid, std::string Filename) {
                 bcLine >> junk;
             }
         }
-
     }
+	globMatrixInit();
 }
 
+void MES::globMatrixInit() {
+	const auto globMatSize = GLOB.numNodes;
+	GLOB.H = Matrix(globMatSize, globMatSize);
+	GLOB.C = Matrix(globMatSize, globMatSize);
+	GLOB.vP = Matrix(globMatSize, 1);
+}

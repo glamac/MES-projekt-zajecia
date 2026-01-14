@@ -37,8 +37,8 @@ namespace MES {
 	};
 
     struct Jakobian {
-        Matrix<2, 2> J;
-        Matrix<2, 2> J1;
+        Matrix J = Matrix(2, 2);
+        Matrix J1 = Matrix(2, 2);
         real_t detJ;
         Jakobian(node integrationP, element E);
     };
