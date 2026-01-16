@@ -4,9 +4,10 @@
 #include "MESTypes.hpp"
 
 namespace MES {
-	class Simulation {
+	struct Sim {
 		grid simulationGrid;
-		public:
+		simulationSharedData simData;
+
 	}
 }
 

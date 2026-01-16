@@ -3,11 +3,9 @@
 #include "MESMatrix.hpp"
 #define INTEGRATION_POINTS 2
 #include <array>
-
+#include "MESData.h"
 
 namespace MES {
-	typedef double real_t;
-
 	struct node {
 		union {
 			struct {real_t x, y;};
@@ -33,6 +31,9 @@ namespace MES {
         MES::Matrix vP = MES::Matrix(4, 1);
         element& calculateBoundaryCondition();
         element& aggregateToGlobal();
+        // Reference to simulation data.
+        simulationSharedData& simData;
+        element(simulationSharedData& ref) : simData(ref) {};
 	};
 }
 

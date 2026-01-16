@@ -35,8 +35,9 @@ MES::element& MES::element::calculateMatrices() {
 	using MIP = MES::IntegrationPoint;
 	using MSF = MES::ShapeFunctions;
 
-	const int numPoints = GLOB.integrationPoints_Surface;
+	const int numPoints = simData.integrationPoints_Surface;
 	element& thisElement = (*this);
+	H = {0}; C = {0};
 
 	for(int i = 0; i < numPoints*numPoints; i++) {
 		auto iPoint = MIP::get(i);
@@ -49,11 +50,11 @@ MES::element& MES::element::calculateMatrices() {
 		const real_t weight = (pWeight.x * pWeight.y);
 
 		auto H_i = (dNdx * dNdx.transpose() + dNdy * dNdy.transpose());
-		H_i *= Jak.detJ * GLOB.Conductivity * weight;
+		H_i *= Jak.detJ * simData.Conductivity * weight;
 		H += H_i;
 
 		auto C_i = (NMatrix * NMatrix.transpose());
-		C_i *= GLOB.Density * GLOB.SpecificHeat * Jak.detJ * weight;
+		C_i *= simData.Density * simData.SpecificHeat * Jak.detJ * weight;
 		C += C_i;
 
 	}
@@ -63,8 +64,9 @@ MES::element& MES::element::calculateMatrices() {
 MES::element& MES::element::calculateBoundaryCondition() {
 	using MIP = MES::IntegrationPoint;
 	using MSF = MES::ShapeFunctions;
+	H_BC = {0}; vP = {0};
 
-	const int numPoints = GLOB.integrationPoints_Boundary;
+	const int numPoints = simData.integrationPoints_Boundary;
 	element& thisElement = (*this);
 	// Iterate over each side in this element.
 	for(int i = 0; i < 4; i++) {
@@ -88,8 +90,8 @@ MES::element& MES::element::calculateBoundaryCondition() {
 			std::pow(node1->x - node2->x, 2) +
 			std::pow(node1->y - node2->y, 2)
 		)) / 2.0;
-		H_BC_i *= GLOB.Alpha * detJ;
-		vP_i *= GLOB.Alpha * GLOB.Tot * detJ;
+		H_BC_i *= simData.Alpha * detJ;
+		vP_i *= simData.Alpha * simData.Tot * detJ;
 
 		H_BC += H_BC_i;
 		vP += vP_i;
@@ -101,10 +103,10 @@ MES::element& MES::element::calculateBoundaryCondition() {
 MES::element& MES::element::aggregateToGlobal() {
 	element& thisElement = (*this);
 	for(size_t i = 0; i < ID.size(); i++) {
-		GLOB.vP[ID[i], 0] += vP[i, 0];
+		simData.vP[ID[i], 0] += vP[i, 0];
 		for(size_t j = 0; j < ID.size(); j++) {
-			GLOB.H[ID[i], ID[j]] += H[i, j];
-			GLOB.C[ID[i], ID[j]] += C[i, j];
+			simData.H[ID[i], ID[j]] += H[i, j];
+			simData.C[ID[i], ID[j]] += C[i, j];
 		}
 	}
 	return thisElement;
