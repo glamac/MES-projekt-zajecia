@@ -1,6 +1,4 @@
-#include <cmath>
 #include <fstream>
-#include <ios>
 #include <iostream>
 
 #include "MESCore.hpp"
@@ -9,10 +7,16 @@
 #include <getopt.h>
 #include <ostream>
 
+#include "paraOutputWriter.hpp"
+
 void printUsage() {
-	std::cout << "Usage: messim [-ip 2|3|4] [-o <outFileName>] <gridFile>";
+	std::cout << "Usage: messim [-ip 2|3|4] [-o <outFileName> [-p]] <gridFile>";
 	exit(-1);
 }
+
+#define IO_NONE 0
+#define IO_TEXT 1
+#define IO_PARA 2
 
 int main(int argc, char* argv[]) {
     MES::grid SimulationGrid;
@@ -20,8 +24,9 @@ int main(int argc, char* argv[]) {
     if (argc <= 0) {
    		printUsage();
     }
-    bool fileIO;
+   	int ioMode = IO_NONE;
     std::string fileIOname;
+    bool fileIOInit = false;
 
     for(int i = 1; i < argc; i++) {
     	std::string arg = argv[i];
@@ -31,9 +36,12 @@ int main(int argc, char* argv[]) {
        		SimulationGrid.simData.integrationPoints_Surface = integration_points;
     	}
       	if(arg.starts_with("-o") || arg.starts_with("--output")) {
-       		fileIO = true;
-        	fileIOname = argv[++i];
+       		ioMode = IO_TEXT;
+        	fileIOname = argv[++i]; fileIOInit = true;
        	}
+       	if(arg.starts_with("-p") || arg.starts_with("--para-output")) {
+      		ioMode = IO_PARA;
+        }
       	if(!arg.starts_with("-")) {
      		std::cout << "Running simulation; file name '" << arg << "', " << SimulationGrid.simData.integrationPoints_Surface << " Integration Points\n";
      		MES::parseTextFile(SimulationGrid, arg);
@@ -51,10 +59,15 @@ int main(int argc, char* argv[]) {
 
     std::ofstream fileOut;
     std::ostream* output = &std::cout;
-    if(fileIO) {
+    MES::paraOutputWriter outWriter;
+    if(ioMode == IO_TEXT) {
    		fileOut.open(fileIOname.c_str());
     	output = &fileOut;
+    } else if (ioMode == IO_PARA && fileIOInit) {
+   		outWriter.initialize(fileIOname);
+     	outWriter.writeTimeStep(SimulationGrid, t0, 0.0);
     }
+
 
     for(MES::real_t time = GLOB.SimulationStepTime; time <= GLOB.SimulationTime; time += stepTime) {
 
@@ -76,10 +89,15 @@ int main(int argc, char* argv[]) {
         // std::cout << "{P}+{[C]/dT}*{T0}: " << b.transpose() << '\n';
         // std::cout << " temperatures: " << t1.transpose() << std::endl;
         t0 = t1;
+        if (ioMode == IO_PARA && fileIOInit) {
+        	outWriter.writeTimeStep(SimulationGrid, t0, time);
+        }
     }
 
-    if(fileIO) {
+    if(ioMode == IO_TEXT) {
     	fileOut.close();
+    } else if (ioMode == IO_PARA && fileIOInit) {
+    	outWriter.close();
     }
 
 

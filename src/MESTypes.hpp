@@ -1,3 +1,5 @@
+#ifndef _MES_TYPES_H
+#define _MES_TYPES_H
 #include <string>
 #include <vector>
 #include "MESCore.hpp"
@@ -22,3 +24,4 @@ namespace MES {
 
 	void parseTextFile(grid& SimulationGrid, std::string Filename);
 }
+#endif // _MES_TYPES_H
