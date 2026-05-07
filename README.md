@@ -6,5 +6,10 @@ Sposób użycia:
 Opcja `-ip` (lub `--integration-points`) decyduje o ilości punktów całkowania (2, 3 lub 4). \
 Opcja `-o` (lub `--output`) decyduje o zapisie do pliku - domyślnie wynik symulacji wyświetlany jest w
 terminalu, w postaci najmniejszej i największej temperatury ze wszystkich wierzchołków w danym kroku czasowym. \ 
-Opcja `-p` (lub `--paraview-output`) decyduje o zapisie w formacie kompatybilnym z oprogramowaniem
+Opcja `-p` (lub `--paraview-output`) decyduje o zapisie w formacie `.pvd`, kompatybilnym z oprogramowaniem
 ParaView, co daje możliwość głębszej wizualizacji procesu.
+
+Przykład wizualizacji przy użyciu ParaView:
+
+![rozkład temperatury](test2/extracts/RenderView1_000004.png)
+
