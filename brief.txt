@@ -1,0 +1,1549 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 56.50     23.03    23.03 3429262468     0.00     0.00  MES::Matrix::operator[](unsigned long, unsigned long)
+ 29.59     35.10    12.06       20     0.60     1.72  MES::gauss(MES::Matrix const&, MES::Matrix const&)
+  5.10     37.18     2.08 207718147     0.00     0.00  MES::Matrix::operator[](unsigned long, unsigned long) const
+  4.73     39.11     1.93                             _init
+  1.23     39.61     0.50  6167067     0.00     0.00  void std::__fill_a1<double*, double>(double*, double*, double const&)
+  0.49     39.81     0.20       40     0.01     0.02  MES::operator/(MES::Matrix const&, double)
+  0.44     39.99     0.18  2025620     0.00     0.00  MES::operator*(MES::Matrix const&, MES::Matrix const&)
+  0.39     40.15     0.16 193983140     0.00     0.00  MES::Matrix::numCols() const
+  0.32     40.28     0.13   288040     0.00     0.00  MES::operator+(MES::Matrix const&, MES::Matrix const&)
+  0.20     40.36     0.08  6090207     0.00     0.00  MES::Matrix::Matrix(unsigned long, unsigned long, double)
+  0.17     40.43     0.07       40     0.00     0.01  MES::Matrix::operator-() const
+  0.10     40.47     0.04 26586740     0.00     0.00  MES::Matrix::numRows() const
+  0.07     40.50     0.03  9848627     0.00     0.00  MES::Matrix::~Matrix()
+  0.07     40.53     0.03  1737600     0.00     0.00  double* std::copy<double const*, double*>(double const*, double const*, double*)
+  0.07     40.56     0.03   868800     0.00     0.00  MES::Matrix::operator*=(double)
+  0.07     40.59     0.03   360060     0.00     0.00  MES::Matrix::operator=(std::initializer_list<double>)
+  0.05     40.61     0.02   864000     0.00     0.00  MES::ShapeFunctions::dEta::N4(double)
+  0.05     40.63     0.02   618000     0.00     0.00  MES::Matrix::operator+=(MES::Matrix const&)
+  0.05     40.65     0.02   288000     0.00     0.00  MES::IntegrationPoint::get(int, int)
+  0.05     40.67     0.02   288000     0.00     0.00  MES::Jakobian::Jakobian(MES::node, MES::element)
+  0.05     40.69     0.02    18000     0.00     0.00  MES::element::aggregateToGlobal()
+  0.04     40.70     0.02  1454400     0.00     0.00  MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>)
+  0.02     40.71     0.01  4755600     0.00     0.00  std::array<MES::node*, 4ul>::operator[](unsigned long)
+  0.02     40.72     0.01  1728020     0.00     0.00  double* std::copy<double*, double*>(double*, double*, double*)
+  0.02     40.73     0.01  1728000     0.00     0.00  MES::Matrix::Matrix(MES::Matrix const&)
+  0.02     40.74     0.01   576020     0.00     0.00  MES::Matrix::Matrix(MES::Matrix&&)
+  0.02     40.75     0.01   288000     0.00     0.00  MES::element::element(MES::element const&)
+  0.02     40.76     0.01   288000     0.00     0.00  std::tuple<MES::Matrix, MES::Matrix>::tuple<MES::Matrix, MES::Matrix>(MES::Matrix&&, MES::Matrix&&)
+  0.02     40.77     0.01    19200     0.00     0.00  std::abs(double)
+  0.00     40.77     0.00  7104120     0.00     0.00  std::initializer_list<double>::size() const
+  0.00     40.77     0.00  3552060     0.00     0.00  std::initializer_list<double>::begin() const
+  0.00     40.77     0.00  3475200     0.00     0.00  double const* std::__miter_base<double const*>(double const*)
+  0.00     40.77     0.00  3456040     0.00     0.00  double* std::__miter_base<double*>(double*)
+  0.00     40.77     0.00  3456000     0.00     0.00  std::array<MES::Matrix, 4ul>::operator[](unsigned long)
+  0.00     40.77     0.00  1737600     0.00     0.00  std::initializer_list<double>::end() const
+  0.00     40.77     0.00  1737600     0.00     0.00  double* std::__copy_move_a2<false, double const*, double const*, double*>(double const*, double const*, double*)
+  0.00     40.77     0.00  1728020     0.00     0.00  double* std::__copy_move_a2<false, double*, double*, double*>(double*, double*, double*)
+  0.00     40.77     0.00  1234800     0.00     0.00  std::array<int, 4ul>::operator[](unsigned long)
+  0.00     40.77     0.00  1152003     0.00     0.00  MES::Matrix::operator=(MES::Matrix&&)
+  0.00     40.77     0.00   873600     0.00     0.00  MES::Matrix::transpose() const
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dEta::N1(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dEta::N2(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dEta::N3(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N1(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N2(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N3(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N4(double)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N1(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N2(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N3(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N4(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N1(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N2(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N3(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N4(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::Jakobian::~Jakobian()
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N1(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N2(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N3(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N4(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::NMatrix(MES::node)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::NMatrix(double, double)
+  0.00     40.77     0.00   288900     0.00     0.00  MES::element::~element()
+  0.00     40.77     0.00   288000     0.00     0.00  calc_dN_dxdy(MES::Jakobian, MES::node)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dEta::NMatrix(MES::node)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dEta::NMatrix(double)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dKsi::NMatrix(MES::node)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dKsi::NMatrix(double)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::IntegrationPoint::getWeight(int, int)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::Jakobian::Jakobian(MES::Jakobian const&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<0ul, MES::Matrix, false>::_M_head(std::_Head_base<0ul, MES::Matrix, false>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<0ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<0ul, MES::Matrix, false>::~_Head_base()
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<1ul, MES::Matrix, false>::_M_head(std::_Head_base<1ul, MES::Matrix, false>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<1ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<1ul, MES::Matrix, false>::~_Head_base()
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_M_head(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl()
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<1ul, MES::Matrix>::_M_head(std::_Tuple_impl<1ul, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<1ul, MES::Matrix>::_Tuple_impl<MES::Matrix>(MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<1ul, MES::Matrix>::~_Tuple_impl()
+  0.00     40.77     0.00   288000     0.00     0.00  std::array<MES::Matrix, 4ul>::~array()
+  0.00     40.77     0.00   288000     0.00     0.00  std::tuple<MES::Matrix, MES::Matrix>::~tuple()
+  0.00     40.77     0.00   288000     0.00     0.00  MES::Matrix& std::__get_helper<0ul, MES::Matrix, MES::Matrix>(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::Matrix& std::__get_helper<1ul, MES::Matrix>(std::_Tuple_impl<1ul, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::tuple_element<0ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<0ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::tuple_element<1ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<1ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&)
+  0.00     40.77     0.00    19220     0.00     0.00  MES::operator*(MES::Matrix const&, double)
+  0.00     40.77     0.00    19220     0.00     0.00  MES::operator*(double, MES::Matrix const&)
+  0.00     40.77     0.00    18000     0.00     0.00  MES::element::calculateMatrices()
+  0.00     40.77     0.00    18000     0.00     0.00  MES::element::calculateBoundaryCondition()
+  0.00     40.77     0.00     9600     0.00     0.00  MES::IntegrationPoint::getForSide(int, int, int)
+  0.00     40.77     0.00     9600     0.00     0.00  MES::IntegrationPoint::getWeightForSide(int, int)
+  0.00     40.77     0.00     4800     0.00     0.00  __gnu_cxx::__promote_2<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0))), std::__is_integer<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0)))>::__value>::__type std::pow<double, int>(double, int)
+  0.00     40.77     0.00     4688     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::size() const
+  0.00     40.77     0.00     4681     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::operator[](unsigned long)
+  0.00     40.77     0.00     3601     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::size() const
+  0.00     40.77     0.00     3600     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::operator[](unsigned long)
+  0.00     40.77     0.00     1861     0.00     0.00  operator new(unsigned long, void*)
+  0.00     40.77     0.00      961     0.00     0.00  MES::node::node()
+  0.00     40.77     0.00      961     0.00     0.00  void std::_Construct<MES::node>(MES::node*)
+  0.00     40.77     0.00      920     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::end()
+  0.00     40.77     0.00      900     0.00     0.00  MES::element::element(MES::simulationSharedData&)
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::end() const
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::begin() const
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::empty() const
+  0.00     40.77     0.00      900     0.00     0.00  MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&)
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::back()
+  0.00     40.77     0.00      900     0.00     0.00  void std::destroy_at<MES::element>(MES::element*)
+  0.00     40.77     0.00      900     0.00     0.00  _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_
+  0.00     40.77     0.00      900     0.00     0.00  void std::_Destroy<MES::element>(MES::element*)
+  0.00     40.77     0.00      219     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const
+  0.00     40.77     0.00      209     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     40.77     0.00      204     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const
+  0.00     40.77     0.00      191     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const
+  0.00     40.77     0.00      185     0.00     0.00  std::char_traits<char>::length(char const*)
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::starts_with(std::basic_string_view<char, std::char_traits<char> >) const
+  0.00     40.77     0.00      182     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const
+  0.00     40.77     0.00      182     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*)
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*, unsigned long)
+  0.00     40.77     0.00      139     0.00     0.00  std::char_traits<char>::compare(char const*, char const*, unsigned long)
+  0.00     40.77     0.00       20     0.00     0.00  MES::grid::clearGlobalMatrices()
+  0.00     40.77     0.00       20     0.00     0.00  MES::Matrix::operator=(MES::Matrix const&)
+  0.00     40.77     0.00       20     0.00     0.01  MES::operator-(MES::Matrix const&, MES::Matrix const&)
+  0.00     40.77     0.00       20     0.00     0.00  MES::Matrix::max() const
+  0.00     40.77     0.00       20     0.00     0.00  MES::Matrix::min() const
+  0.00     40.77     0.00       20     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::begin()
+  0.00     40.77     0.00       17     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const
+  0.00     40.77     0.00       17     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const
+  0.00     40.77     0.00       17     0.00     0.00  std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
+  0.00     40.77     0.00       13     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+  0.00     40.77     0.00       12     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator()
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::length() const
+  0.00     40.77     0.00        9     0.00     0.00  std::char_traits<char>::assign(char&, char const&)
+  0.00     40.77     0.00        9     0.00     0.00  std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider()
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data()
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+  0.00     40.77     0.00        8     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  0.00     40.77     0.00        8     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
+  0.00     40.77     0.00        8     0.00     0.00  std::is_constant_evaluated()
+  0.00     40.77     0.00        7     0.00     0.00  std::char_traits<char>::copy(char*, char const*, unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__new_allocator<char>::deallocate(char*, unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__new_allocator<char>::allocate(unsigned long, void const*)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_capacity(unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data(char*)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
+  0.00     40.77     0.00        5     0.00     0.00  _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E
+  0.00     40.77     0.00        4     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() const
+  0.00     40.77     0.00        4     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::max_size() const
+  0.00     40.77     0.00        4     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const
+  0.00     40.77     0.00        4     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_S_max_size(std::allocator<MES::node> const&)
+  0.00     40.77     0.00        3     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator()
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
+  0.00     40.77     0.00        3     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00     40.77     0.00        3     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars<char const*>(char*, char const*, char const*)
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+  0.00     40.77     0.00        2     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long)
+  0.00     40.77     0.00        2     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator()
+  0.00     40.77     0.00        1     0.00     0.00  MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00     40.77     0.00        1     0.00     0.00  MES::paraOutputWriter::paraOutputWriter()
+  0.00     40.77     0.00        1     0.00     0.00  MES::paraOutputWriter::~paraOutputWriter()
+  0.00     40.77     0.00        1     0.00     0.00  MES::simulationSharedData::simulationSharedData()
+  0.00     40.77     0.00        1     0.00     0.00  MES::simulationSharedData::~simulationSharedData()
+  0.00     40.77     0.00        1     0.00     0.00  MES::grid::grid()
+  0.00     40.77     0.00        1     0.00     0.00  MES::grid::~grid()
+  0.00     40.77     0.00        1     0.00     0.00  int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() const
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::capacity() const
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::max_size() const
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() const
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_allocate(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::~_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_deallocate(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl_data::_Vector_impl_data()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_allocate(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::~_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl_data::_Vector_impl_data()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::node>::deallocate(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::node>::allocate(unsigned long, void const*)
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::element>::deallocate(MES::element*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::element>::allocate(unsigned long, void const*)
+  0.00     40.77     0.00        1     0.00     0.00  std::_UninitDestroyGuard<MES::node*, void>::release()
+  0.00     40.77     0.00        1     0.00     0.00  std::_UninitDestroyGuard<MES::node*, void>::_UninitDestroyGuard(MES::node*&)
+  0.00     40.77     0.00        1     0.00     0.00  std::_UninitDestroyGuard<MES::node*, void>::~_UninitDestroyGuard()
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_S_relocate(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::_Guard_alloc(MES::node*, unsigned long, std::_Vector_base<MES::node, std::allocator<MES::node> >&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::~_Guard_alloc()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::vector()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::~vector()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::_S_max_size(std::allocator<MES::element> const&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::_S_relocate(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::vector()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::~vector()
+  0.00     40.77     0.00        1     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__relocate_a<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::element* std::__relocate_a<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__relocate_a_1<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::element* std::__relocate_a_1<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__uninitialized_default_n_a<MES::node*, unsigned long, MES::node>(MES::node*, unsigned long, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     40.77     0.00        1     0.00     0.00  void std::_Destroy<MES::node*>(MES::node*, MES::node*)
+  0.00     40.77     0.00        1     0.00     0.00  void std::_Destroy<MES::element*>(MES::element*, MES::element*)
+  0.00     40.77     0.00        1     0.00     0.00  __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Range_chk::_S_chk(long, std::integral_constant<bool, true>)
+  0.00     40.77     0.00        1     0.00     0.00  __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::_Save_errno()
+  0.00     40.77     0.00        1     0.00     0.00  __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::~_Save_errno()
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) for 0.02% of 40.77 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     95.3    0.00   38.84                 main [1]
+               12.06   22.35      20/20          MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.00    3.12   18000/18000       MES::element::calculateMatrices() [4]
+                0.20    0.65      40/40          MES::operator/(MES::Matrix const&, double) [9]
+                0.00    0.20      20/20          MES::operator-(MES::Matrix const&, MES::Matrix const&) [15]
+                0.04    0.16      20/40          MES::Matrix::operator-() const [13]
+                0.00    0.03   18000/18000       MES::element::calculateBoundaryCondition() [23]
+                0.02    0.01   18000/18000       MES::element::aggregateToGlobal() [26]
+                0.00    0.00       1/1           MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00      20/20          MES::Matrix::min() const [62]
+                0.00    0.00      20/20          MES::Matrix::max() const [63]
+                0.00    0.00      20/288040      MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.00    0.00      20/2025620     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.00    0.00       1/1           MES::grid::~grid() [64]
+                0.00    0.00      20/20          MES::grid::clearGlobalMatrices() [69]
+                0.00    0.00      20/19220       MES::operator*(double, MES::Matrix const&) [46]
+                0.00    0.00     161/9848627     MES::Matrix::~Matrix() [24]
+                0.00    0.00       1/1           MES::grid::grid() [71]
+                0.00    0.00      20/20          MES::Matrix::operator=(MES::Matrix const&) [72]
+                0.00    0.00       1/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.00    0.00      20/20          std::vector<MES::element, std::allocator<MES::element> >::begin() [141]
+                0.00    0.00      20/920         std::vector<MES::element, std::allocator<MES::element> >::end() [124]
+                0.00    0.00      13/182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+                0.00    0.00       5/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [153]
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [175]
+                0.00    0.00       1/5           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+                0.00    0.00       1/1           std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int) [223]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+                0.00    0.00       1/1           MES::paraOutputWriter::paraOutputWriter() [180]
+                0.00    0.00       1/1           MES::paraOutputWriter::~paraOutputWriter() [181]
+-----------------------------------------------
+               12.06   22.35      20/20          main [1]
+[2]     84.4   12.06   22.35      20         MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+               22.16    0.00 3298903908/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.19    0.00 18489640/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.01    0.00   19200/19200       std::abs(double) [38]
+                0.00    0.00      40/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.00    0.00      20/576020      MES::Matrix::Matrix(MES::Matrix&&) [37]
+                0.00    0.00      40/9848627     MES::Matrix::~Matrix() [24]
+                0.00    0.00      80/26586740     MES::Matrix::numRows() const [22]
+                0.00    0.00      40/193983140     MES::Matrix::numCols() const [17]
+-----------------------------------------------
+                0.00    0.00  211220/3429262468     MES::operator*(MES::Matrix const&, double) [45]
+                0.01    0.00 1296000/3429262468     MES::element::aggregateToGlobal() [26]
+                0.02    0.00 3456000/3429262468     MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+                0.02    0.00 3494400/3429262468     MES::Matrix::transpose() const [18]
+                0.05    0.00 6912000/3429262468     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+                0.07    0.00 9744000/3429262468     MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.07    0.00 10416000/3429262468     MES::Matrix::operator*=(double) [19]
+                0.11    0.00 16300820/3429262468     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.12    0.00 18489640/3429262468     MES::Matrix::operator-() const [13]
+                0.16    0.00 23097640/3429262468     MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.25    0.00 36940840/3429262468     MES::operator/(MES::Matrix const&, double) [9]
+               22.16    0.00 3298903908/3429262468     MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+[3]     56.5   23.03    0.00 3429262468         MES::Matrix::operator[](unsigned long, unsigned long) [3]
+-----------------------------------------------
+                0.00    3.12   18000/18000       main [1]
+[4]      7.7    0.00    3.12   18000         MES::element::calculateMatrices() [4]
+                0.00    1.08  288000/288000      calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+                0.13    0.67  288000/288040      MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.08    0.48  864000/2025620     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.02    0.17  288000/288000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+                0.02    0.17  576000/618000      MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.00    0.15  864000/873600      MES::Matrix::transpose() const [18]
+                0.02    0.06  576000/868800      MES::Matrix::operator*=(double) [19]
+                0.01    0.01  288000/288000      MES::element::element(MES::element const&) [27]
+                0.02    0.00  288000/288000      MES::IntegrationPoint::get(int, int) [29]
+                0.00    0.01  288000/297600      MES::ShapeFunctions::NMatrix(MES::node) [40]
+                0.01    0.00 2304000/9848627     MES::Matrix::~Matrix() [24]
+                0.00    0.01  288000/288000      MES::Jakobian::Jakobian(MES::Jakobian const&) [44]
+                0.00    0.00   36000/360060      MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.00    0.00  576000/576000      MES::Jakobian::~Jakobian() [51]
+                0.00    0.00  288000/288900      MES::element::~element() [50]
+                0.00    0.00  288000/288000      std::tuple<MES::Matrix, MES::Matrix>::~tuple() [54]
+                0.00    0.00  288000/288000      MES::IntegrationPoint::getWeight(int, int) [105]
+                0.00    0.00  288000/288000      std::tuple_element<0ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<0ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&) [112]
+                0.00    0.00  288000/288000      std::tuple_element<1ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<1ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&) [113]
+-----------------------------------------------
+                0.00    0.00   19249/207718147     MES::Matrix::max() const [63]
+                0.00    0.00   21838/207718147     MES::Matrix::min() const [62]
+                0.00    0.00  211220/207718147     MES::operator*(MES::Matrix const&, double) [45]
+                0.03    0.00 3494400/207718147     MES::Matrix::transpose() const [18]
+                0.10    0.00 9744000/207718147     MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.19    0.00 18489640/207718147     MES::Matrix::operator-() const [13]
+                0.19    0.00 18489640/207718147     MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.37    0.00 36940840/207718147     MES::operator/(MES::Matrix const&, double) [9]
+                0.46    0.00 46195280/207718147     MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.74    0.00 74112040/207718147     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+[5]      5.1    2.08    0.00 207718147         MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      4.7    1.93    0.00                 _init [6]
+-----------------------------------------------
+                0.00    0.00      20/2025620     main [1]
+                0.00    0.01    9600/2025620     MES::element::calculateBoundaryCondition() [23]
+                0.08    0.48  864000/2025620     MES::element::calculateMatrices() [4]
+                0.10    0.64 1152000/2025620     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[7]      3.2    0.18    1.13 2025620         MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.74    0.00 74112040/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.03    0.16 2025620/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.11    0.00 16300820/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.07    0.00 79526520/193983140     MES::Matrix::numCols() const [17]
+                0.02    0.00 11894480/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    1.08  288000/288000      MES::element::calculateMatrices() [4]
+[8]      2.6    0.00    1.08  288000         calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+                0.10    0.64 1152000/2025620     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.03    0.19 2304000/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.05    0.00 6912000/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.01    0.01  288000/288000      std::tuple<MES::Matrix, MES::Matrix>::tuple<MES::Matrix, MES::Matrix>(MES::Matrix&&, MES::Matrix&&) [31]
+                0.01    0.01  576000/1454400     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.00    0.01  288000/288000      MES::ShapeFunctions::dEta::NMatrix(MES::node) [32]
+                0.01    0.00 3456000/9848627     MES::Matrix::~Matrix() [24]
+                0.00    0.01  288000/288000      MES::ShapeFunctions::dKsi::NMatrix(MES::node) [42]
+                0.00    0.00  288000/288000      std::array<MES::Matrix, 4ul>::~array() [52]
+                0.00    0.00 3456000/3456000     std::array<MES::Matrix, 4ul>::operator[](unsigned long) [81]
+                0.00    0.00 1152000/1152003     MES::Matrix::operator=(MES::Matrix&&) [86]
+-----------------------------------------------
+                0.20    0.65      40/40          main [1]
+[9]      2.1    0.20    0.65      40         MES::operator/(MES::Matrix const&, double) [9]
+                0.37    0.00 36940840/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.25    0.00 36940840/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.03    0.00 36979320/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00   38520/26586740     MES::Matrix::numRows() const [22]
+                0.00    0.00      40/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+-----------------------------------------------
+                0.00    0.00      20/288040      main [1]
+                0.00    0.00      20/288040      MES::operator-(MES::Matrix const&, MES::Matrix const&) [15]
+                0.13    0.67  288000/288040      MES::element::calculateMatrices() [4]
+[10]     2.0    0.13    0.67  288040         MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.46    0.00 46195280/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.16    0.00 23097640/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.00    0.02  288040/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.02    0.00 25152200/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00 2342600/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.00       1/6090207     main [1]
+                0.00    0.00       3/6090207     MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00       3/6090207     MES::simulationSharedData::simulationSharedData() [70]
+                0.00    0.00      40/6090207     MES::Matrix::operator-() const [13]
+                0.00    0.00      40/6090207     MES::operator/(MES::Matrix const&, double) [9]
+                0.00    0.00      40/6090207     MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.00    0.00    3600/6090207     MES::element::element(MES::simulationSharedData&) [59]
+                0.00    0.00   19220/6090207     MES::operator*(MES::Matrix const&, double) [45]
+                0.00    0.02  288040/6090207     MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.01    0.05  576000/6090207     MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+                0.01    0.07  873600/6090207     MES::Matrix::transpose() const [18]
+                0.03    0.16 2025620/6090207     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.03    0.19 2304000/6090207     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[11]     1.4    0.08    0.49 6090207         MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.49    0.00 6090207/6167067     void std::__fill_a1<double*, double>(double*, double*, double const&) [12]
+-----------------------------------------------
+                0.00    0.00    4800/6167067     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.01    0.00   72060/6167067     MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.49    0.00 6090207/6167067     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+[12]     1.2    0.50    0.00 6167067         void std::__fill_a1<double*, double>(double*, double*, double const&) [12]
+-----------------------------------------------
+                0.04    0.16      20/40          main [1]
+                0.04    0.16      20/40          MES::operator-(MES::Matrix const&, MES::Matrix const&) [15]
+[13]     1.0    0.07    0.32      40         MES::Matrix::operator-() const [13]
+                0.19    0.00 18489640/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.12    0.00 18489640/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.02    0.00 18528120/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00   38520/26586740     MES::Matrix::numRows() const [22]
+                0.00    0.00      40/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+-----------------------------------------------
+                0.00    0.01   42000/618000      MES::element::calculateBoundaryCondition() [23]
+                0.02    0.17  576000/618000      MES::element::calculateMatrices() [4]
+[14]     0.5    0.02    0.18  618000         MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.10    0.00 9744000/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.07    0.00 9744000/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.01    0.00 12216000/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00 3090000/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.20      20/20          main [1]
+[15]     0.5    0.00    0.20      20         MES::operator-(MES::Matrix const&, MES::Matrix const&) [15]
+                0.04    0.16      20/40          MES::Matrix::operator-() const [13]
+                0.00    0.00      20/288040      MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.00    0.00      20/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.02    0.17  288000/288000      MES::element::calculateMatrices() [4]
+[16]     0.5    0.02    0.17  288000         MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+                0.01    0.05  576000/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.01    0.03  288000/868800      MES::Matrix::operator*=(double) [19]
+                0.02    0.01  288000/360060      MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.02    0.00 3456000/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.00    0.01  576000/576000      MES::ShapeFunctions::dEta::N4(MES::node) [34]
+                0.01    0.00 4608000/4755600     std::array<MES::node*, 4ul>::operator[](unsigned long) [35]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dKsi::N1(MES::node) [97]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dKsi::N2(MES::node) [98]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dKsi::N3(MES::node) [99]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dKsi::N4(MES::node) [100]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dEta::N1(MES::node) [94]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dEta::N2(MES::node) [95]
+                0.00    0.00  576000/576000      MES::ShapeFunctions::dEta::N3(MES::node) [96]
+-----------------------------------------------
+                0.00    0.00      40/193983140     MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.00    0.00   38440/193983140     MES::Matrix::min() const [62]
+                0.00    0.00   38440/193983140     MES::Matrix::max() const [63]
+                0.00    0.00  326460/193983140     MES::operator*(MES::Matrix const&, double) [45]
+                0.01    0.00 7862400/193983140     MES::Matrix::transpose() const [18]
+                0.01    0.00 12216000/193983140     MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.01    0.00 13315200/193983140     MES::Matrix::operator*=(double) [19]
+                0.02    0.00 18528120/193983140     MES::Matrix::operator-() const [13]
+                0.02    0.00 25152200/193983140     MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.03    0.00 36979320/193983140     MES::operator/(MES::Matrix const&, double) [9]
+                0.07    0.00 79526520/193983140     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+[17]     0.4    0.16    0.00 193983140         MES::Matrix::numCols() const [17]
+-----------------------------------------------
+                0.00    0.00    9600/873600      MES::element::calculateBoundaryCondition() [23]
+                0.00    0.15  864000/873600      MES::element::calculateMatrices() [4]
+[18]     0.4    0.00    0.16  873600         MES::Matrix::transpose() const [18]
+                0.01    0.07  873600/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.03    0.00 3494400/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.02    0.00 3494400/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.01    0.00 5241600/26586740     MES::Matrix::numRows() const [22]
+                0.01    0.00 7862400/193983140     MES::Matrix::numCols() const [17]
+-----------------------------------------------
+                0.00    0.00    4800/868800      MES::element::calculateBoundaryCondition() [23]
+                0.01    0.03  288000/868800      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+                0.02    0.06  576000/868800      MES::element::calculateMatrices() [4]
+[19]     0.3    0.03    0.09  868800         MES::Matrix::operator*=(double) [19]
+                0.07    0.00 10416000/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.01    0.00 13315200/193983140     MES::Matrix::numCols() const [17]
+                0.01    0.00 3768000/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.00      60/360060      MES::grid::clearGlobalMatrices() [69]
+                0.00    0.00   36000/360060      MES::element::calculateMatrices() [4]
+                0.00    0.00   36000/360060      MES::element::calculateBoundaryCondition() [23]
+                0.02    0.01  288000/360060      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[20]     0.1    0.03    0.01  360060         MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.01    0.00   72060/6167067     void std::__fill_a1<double*, double>(double*, double*, double const&) [12]
+                0.00    0.00  288000/1737600     double* std::copy<double const*, double*>(double const*, double const*, double*) [25]
+                0.00    0.00 1008120/7104120     std::initializer_list<double>::size() const [77]
+                0.00    0.00  360060/3552060     std::initializer_list<double>::begin() const [78]
+                0.00    0.00  288000/1737600     std::initializer_list<double>::end() const [82]
+-----------------------------------------------
+                0.00    0.00    4800/1454400     MES::element::calculateBoundaryCondition() [23]
+                0.00    0.01  288000/1454400     MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+                0.00    0.01  288000/1454400     MES::ShapeFunctions::dEta::NMatrix(double) [33]
+                0.00    0.01  297600/1454400     MES::ShapeFunctions::NMatrix(double, double) [41]
+                0.01    0.01  576000/1454400     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[21]     0.1    0.02    0.03 1454400         MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.03    0.00 1449600/1737600     double* std::copy<double const*, double*>(double const*, double const*, double*) [25]
+                0.00    0.00    4800/6167067     void std::__fill_a1<double*, double>(double*, double*, double const&) [12]
+                0.00    0.00 4358400/7104120     std::initializer_list<double>::size() const [77]
+                0.00    0.00 1454400/3552060     std::initializer_list<double>::begin() const [78]
+                0.00    0.00 1449600/1737600     std::initializer_list<double>::end() const [82]
+-----------------------------------------------
+                0.00    0.00      80/26586740     MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.00    0.00   19240/26586740     MES::Matrix::min() const [62]
+                0.00    0.00   19240/26586740     MES::Matrix::max() const [63]
+                0.00    0.00   38520/26586740     MES::Matrix::operator-() const [13]
+                0.00    0.00   38520/26586740     MES::operator/(MES::Matrix const&, double) [9]
+                0.00    0.00  134460/26586740     MES::operator*(MES::Matrix const&, double) [45]
+                0.00    0.00 2342600/26586740     MES::operator+(MES::Matrix const&, MES::Matrix const&) [10]
+                0.00    0.00 3090000/26586740     MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.01    0.00 3768000/26586740     MES::Matrix::operator*=(double) [19]
+                0.01    0.00 5241600/26586740     MES::Matrix::transpose() const [18]
+                0.02    0.00 11894480/26586740     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+[22]     0.1    0.04    0.00 26586740         MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.03   18000/18000       main [1]
+[23]     0.1    0.00    0.03   18000         MES::element::calculateBoundaryCondition() [23]
+                0.00    0.01   42000/618000      MES::Matrix::operator+=(MES::Matrix const&) [14]
+                0.00    0.01    9600/2025620     MES::operator*(MES::Matrix const&, MES::Matrix const&) [7]
+                0.00    0.01   19200/19220       MES::operator*(double, MES::Matrix const&) [46]
+                0.00    0.00   36000/360060      MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.00    0.00    9600/873600      MES::Matrix::transpose() const [18]
+                0.00    0.00    4800/868800      MES::Matrix::operator*=(double) [19]
+                0.00    0.00  144000/4755600     std::array<MES::node*, 4ul>::operator[](unsigned long) [35]
+                0.00    0.00    9600/297600      MES::ShapeFunctions::NMatrix(MES::node) [40]
+                0.00    0.00   52800/9848627     MES::Matrix::~Matrix() [24]
+                0.00    0.00    4800/1454400     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.00    0.00    9600/9600        MES::IntegrationPoint::getForSide(int, int, int) [114]
+                0.00    0.00    9600/9600        MES::IntegrationPoint::getWeightForSide(int, int) [115]
+                0.00    0.00    4800/4800        __gnu_cxx::__promote_2<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0))), std::__is_integer<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0)))>::__value>::__type std::pow<double, int>(double, int) [116]
+-----------------------------------------------
+                0.00    0.00       3/9848627     MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00       3/9848627     MES::simulationSharedData::~simulationSharedData() [73]
+                0.00    0.00      20/9848627     MES::operator-(MES::Matrix const&, MES::Matrix const&) [15]
+                0.00    0.00      40/9848627     MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.00    0.00     161/9848627     main [1]
+                0.00    0.00   52800/9848627     MES::element::calculateBoundaryCondition() [23]
+                0.00    0.00  288000/9848627     std::_Head_base<1ul, MES::Matrix, false>::~_Head_base() [56]
+                0.00    0.00  288000/9848627     std::_Head_base<0ul, MES::Matrix, false>::~_Head_base() [55]
+                0.00    0.00 1152000/9848627     std::array<MES::Matrix, 4ul>::~array() [52]
+                0.00    0.00 1152000/9848627     MES::Jakobian::~Jakobian() [51]
+                0.00    0.00 1155600/9848627     MES::element::~element() [50]
+                0.01    0.00 2304000/9848627     MES::element::calculateMatrices() [4]
+                0.01    0.00 3456000/9848627     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[24]     0.1    0.03    0.00 9848627         MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00  288000/1737600     MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.03    0.00 1449600/1737600     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+[25]     0.1    0.03    0.00 1737600         double* std::copy<double const*, double*>(double const*, double const*, double*) [25]
+                0.00    0.00 3475200/3475200     double const* std::__miter_base<double const*>(double const*) [79]
+                0.00    0.00 1737600/1737600     double* std::__copy_move_a2<false, double const*, double const*, double*>(double const*, double const*, double*) [83]
+-----------------------------------------------
+                0.02    0.01   18000/18000       main [1]
+[26]     0.1    0.02    0.01   18000         MES::element::aggregateToGlobal() [26]
+                0.01    0.00 1296000/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.00    0.00 1224000/1234800     std::array<int, 4ul>::operator[](unsigned long) [85]
+-----------------------------------------------
+                0.01    0.01  288000/288000      MES::element::calculateMatrices() [4]
+[27]     0.1    0.01    0.01  288000         MES::element::element(MES::element const&) [27]
+                0.01    0.01 1152000/1728000     MES::Matrix::Matrix(MES::Matrix const&) [30]
+-----------------------------------------------
+                0.01    0.00  288000/864000      MES::ShapeFunctions::dEta::NMatrix(double) [33]
+                0.01    0.00  576000/864000      MES::ShapeFunctions::dEta::N4(MES::node) [34]
+[28]     0.0    0.02    0.00  864000         MES::ShapeFunctions::dEta::N4(double) [28]
+-----------------------------------------------
+                0.02    0.00  288000/288000      MES::element::calculateMatrices() [4]
+[29]     0.0    0.02    0.00  288000         MES::IntegrationPoint::get(int, int) [29]
+-----------------------------------------------
+                0.00    0.00  576000/1728000     MES::Jakobian::Jakobian(MES::Jakobian const&) [44]
+                0.01    0.01 1152000/1728000     MES::element::element(MES::element const&) [27]
+[30]     0.0    0.01    0.01 1728000         MES::Matrix::Matrix(MES::Matrix const&) [30]
+                0.01    0.00 1728000/1728020     double* std::copy<double*, double*>(double*, double*, double*) [36]
+-----------------------------------------------
+                0.01    0.01  288000/288000      calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[31]     0.0    0.01    0.01  288000         std::tuple<MES::Matrix, MES::Matrix>::tuple<MES::Matrix, MES::Matrix>(MES::Matrix&&, MES::Matrix&&) [31]
+                0.00    0.01  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&) [39]
+-----------------------------------------------
+                0.00    0.01  288000/288000      calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[32]     0.0    0.00    0.01  288000         MES::ShapeFunctions::dEta::NMatrix(MES::node) [32]
+                0.00    0.01  288000/288000      MES::ShapeFunctions::dEta::NMatrix(double) [33]
+-----------------------------------------------
+                0.00    0.01  288000/288000      MES::ShapeFunctions::dEta::NMatrix(MES::node) [32]
+[33]     0.0    0.00    0.01  288000         MES::ShapeFunctions::dEta::NMatrix(double) [33]
+                0.00    0.01  288000/1454400     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.01    0.00  288000/864000      MES::ShapeFunctions::dEta::N4(double) [28]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dEta::N1(double) [87]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dEta::N2(double) [88]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dEta::N3(double) [89]
+-----------------------------------------------
+                0.00    0.01  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[34]     0.0    0.00    0.01  576000         MES::ShapeFunctions::dEta::N4(MES::node) [34]
+                0.01    0.00  576000/864000      MES::ShapeFunctions::dEta::N4(double) [28]
+-----------------------------------------------
+                0.00    0.00    3600/4755600     MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00  144000/4755600     MES::element::calculateBoundaryCondition() [23]
+                0.01    0.00 4608000/4755600     MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[35]     0.0    0.01    0.00 4755600         std::array<MES::node*, 4ul>::operator[](unsigned long) [35]
+-----------------------------------------------
+                0.00    0.00      20/1728020     MES::Matrix::operator=(MES::Matrix const&) [72]
+                0.01    0.00 1728000/1728020     MES::Matrix::Matrix(MES::Matrix const&) [30]
+[36]     0.0    0.01    0.00 1728020         double* std::copy<double*, double*>(double*, double*, double*) [36]
+                0.00    0.00 3456040/3456040     double* std::__miter_base<double*>(double*) [80]
+                0.00    0.00 1728020/1728020     double* std::__copy_move_a2<false, double*, double*, double*>(double*, double*, double*) [84]
+-----------------------------------------------
+                0.00    0.00      20/576020      MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+                0.01    0.00  288000/576020      std::_Head_base<0ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [47]
+                0.01    0.00  288000/576020      std::_Head_base<1ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [48]
+[37]     0.0    0.01    0.00  576020         MES::Matrix::Matrix(MES::Matrix&&) [37]
+-----------------------------------------------
+                0.01    0.00   19200/19200       MES::gauss(MES::Matrix const&, MES::Matrix const&) [2]
+[38]     0.0    0.01    0.00   19200         std::abs(double) [38]
+-----------------------------------------------
+                0.00    0.01  288000/288000      std::tuple<MES::Matrix, MES::Matrix>::tuple<MES::Matrix, MES::Matrix>(MES::Matrix&&, MES::Matrix&&) [31]
+[39]     0.0    0.00    0.01  288000         std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&) [39]
+                0.00    0.01  288000/288000      std::_Tuple_impl<1ul, MES::Matrix>::_Tuple_impl<MES::Matrix>(MES::Matrix&&) [49]
+                0.00    0.01  288000/288000      std::_Head_base<0ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [47]
+-----------------------------------------------
+                0.00    0.00    9600/297600      MES::element::calculateBoundaryCondition() [23]
+                0.00    0.01  288000/297600      MES::element::calculateMatrices() [4]
+[40]     0.0    0.00    0.01  297600         MES::ShapeFunctions::NMatrix(MES::node) [40]
+                0.00    0.01  297600/297600      MES::ShapeFunctions::NMatrix(double, double) [41]
+-----------------------------------------------
+                0.00    0.01  297600/297600      MES::ShapeFunctions::NMatrix(MES::node) [40]
+[41]     0.0    0.00    0.01  297600         MES::ShapeFunctions::NMatrix(double, double) [41]
+                0.00    0.01  297600/1454400     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.00    0.00  297600/297600      MES::ShapeFunctions::N1(double, double) [101]
+                0.00    0.00  297600/297600      MES::ShapeFunctions::N2(double, double) [102]
+                0.00    0.00  297600/297600      MES::ShapeFunctions::N3(double, double) [103]
+                0.00    0.00  297600/297600      MES::ShapeFunctions::N4(double, double) [104]
+-----------------------------------------------
+                0.00    0.01  288000/288000      calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[42]     0.0    0.00    0.01  288000         MES::ShapeFunctions::dKsi::NMatrix(MES::node) [42]
+                0.00    0.01  288000/288000      MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+-----------------------------------------------
+                0.00    0.01  288000/288000      MES::ShapeFunctions::dKsi::NMatrix(MES::node) [42]
+[43]     0.0    0.00    0.01  288000         MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+                0.00    0.01  288000/1454400     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::N1(double) [90]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::N2(double) [91]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::N3(double) [92]
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::N4(double) [93]
+-----------------------------------------------
+                0.00    0.01  288000/288000      MES::element::calculateMatrices() [4]
+[44]     0.0    0.00    0.01  288000         MES::Jakobian::Jakobian(MES::Jakobian const&) [44]
+                0.00    0.00  576000/1728000     MES::Matrix::Matrix(MES::Matrix const&) [30]
+-----------------------------------------------
+                0.00    0.01   19220/19220       MES::operator*(double, MES::Matrix const&) [46]
+[45]     0.0    0.00    0.01   19220         MES::operator*(MES::Matrix const&, double) [45]
+                0.00    0.00  211220/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.00    0.00   19220/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.00    0.00  211220/3429262468     MES::Matrix::operator[](unsigned long, unsigned long) [3]
+                0.00    0.00  326460/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00  134460/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.00      20/19220       main [1]
+                0.00    0.01   19200/19220       MES::element::calculateBoundaryCondition() [23]
+[46]     0.0    0.00    0.01   19220         MES::operator*(double, MES::Matrix const&) [46]
+                0.00    0.01   19220/19220       MES::operator*(MES::Matrix const&, double) [45]
+-----------------------------------------------
+                0.00    0.01  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&) [39]
+[47]     0.0    0.00    0.01  288000         std::_Head_base<0ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [47]
+                0.01    0.00  288000/576020      MES::Matrix::Matrix(MES::Matrix&&) [37]
+-----------------------------------------------
+                0.00    0.01  288000/288000      std::_Tuple_impl<1ul, MES::Matrix>::_Tuple_impl<MES::Matrix>(MES::Matrix&&) [49]
+[48]     0.0    0.00    0.01  288000         std::_Head_base<1ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [48]
+                0.01    0.00  288000/576020      MES::Matrix::Matrix(MES::Matrix&&) [37]
+-----------------------------------------------
+                0.00    0.01  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&) [39]
+[49]     0.0    0.00    0.01  288000         std::_Tuple_impl<1ul, MES::Matrix>::_Tuple_impl<MES::Matrix>(MES::Matrix&&) [49]
+                0.00    0.01  288000/288000      std::_Head_base<1ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [48]
+-----------------------------------------------
+                0.00    0.00     900/288900      void std::destroy_at<MES::element>(MES::element*) [65]
+                0.00    0.00  288000/288900      MES::element::calculateMatrices() [4]
+[50]     0.0    0.00    0.00  288900         MES::element::~element() [50]
+                0.00    0.00 1155600/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::element::calculateMatrices() [4]
+[51]     0.0    0.00    0.00  576000         MES::Jakobian::~Jakobian() [51]
+                0.00    0.00 1152000/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00  288000/288000      calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[52]     0.0    0.00    0.00  288000         std::array<MES::Matrix, 4ul>::~array() [52]
+                0.00    0.00 1152000/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::tuple<MES::Matrix, MES::Matrix>::~tuple() [54]
+[53]     0.0    0.00    0.00  288000         std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl() [53]
+                0.00    0.00  288000/288000      std::_Head_base<0ul, MES::Matrix, false>::~_Head_base() [55]
+                0.00    0.00  288000/288000      std::_Tuple_impl<1ul, MES::Matrix>::~_Tuple_impl() [57]
+-----------------------------------------------
+                0.00    0.00  288000/288000      MES::element::calculateMatrices() [4]
+[54]     0.0    0.00    0.00  288000         std::tuple<MES::Matrix, MES::Matrix>::~tuple() [54]
+                0.00    0.00  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl() [53]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl() [53]
+[55]     0.0    0.00    0.00  288000         std::_Head_base<0ul, MES::Matrix, false>::~_Head_base() [55]
+                0.00    0.00  288000/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::_Tuple_impl<1ul, MES::Matrix>::~_Tuple_impl() [57]
+[56]     0.0    0.00    0.00  288000         std::_Head_base<1ul, MES::Matrix, false>::~_Head_base() [56]
+                0.00    0.00  288000/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl() [53]
+[57]     0.0    0.00    0.00  288000         std::_Tuple_impl<1ul, MES::Matrix>::~_Tuple_impl() [57]
+                0.00    0.00  288000/288000      std::_Head_base<1ul, MES::Matrix, false>::~_Head_base() [56]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[58]     0.0    0.00    0.00       1         MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00     900/900         MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&) [60]
+                0.00    0.00    3600/4755600     std::array<MES::node*, 4ul>::operator[](unsigned long) [35]
+                0.00    0.00       3/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+                0.00    0.00       3/9848627     MES::Matrix::~Matrix() [24]
+                0.00    0.00   10800/1234800     std::array<int, 4ul>::operator[](unsigned long) [85]
+                0.00    0.00    4681/4681        std::vector<MES::node, std::allocator<MES::node> >::operator[](unsigned long) [118]
+                0.00    0.00    3600/3600        std::vector<MES::element, std::allocator<MES::element> >::operator[](unsigned long) [120]
+                0.00    0.00     169/182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+                0.00    0.00       3/1152003     MES::Matrix::operator=(MES::Matrix&&) [86]
+                0.00    0.00       2/5           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+                0.00    0.00       2/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [153]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long) [214]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+-----------------------------------------------
+                0.00    0.00     900/900         _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_ [61]
+[59]     0.0    0.00    0.00     900         MES::element::element(MES::simulationSharedData&) [59]
+                0.00    0.00    3600/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+-----------------------------------------------
+                0.00    0.00     900/900         MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+[60]     0.0    0.00    0.00     900         MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&) [60]
+                0.00    0.00     900/900         _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_ [61]
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::back() [128]
+-----------------------------------------------
+                0.00    0.00     900/900         MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&) [60]
+[61]     0.0    0.00    0.00     900         _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_ [61]
+                0.00    0.00     900/900         MES::element::element(MES::simulationSharedData&) [59]
+                0.00    0.00     900/1861        operator new(unsigned long, void*) [121]
+-----------------------------------------------
+                0.00    0.00      20/20          main [1]
+[62]     0.0    0.00    0.00      20         MES::Matrix::min() const [62]
+                0.00    0.00   21838/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.00    0.00   38440/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00   19240/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.00      20/20          main [1]
+[63]     0.0    0.00    0.00      20         MES::Matrix::max() const [63]
+                0.00    0.00   19249/207718147     MES::Matrix::operator[](unsigned long, unsigned long) const [5]
+                0.00    0.00   38440/193983140     MES::Matrix::numCols() const [17]
+                0.00    0.00   19240/26586740     MES::Matrix::numRows() const [22]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[64]     0.0    0.00    0.00       1         MES::grid::~grid() [64]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::~vector() [67]
+                0.00    0.00       1/1           MES::simulationSharedData::~simulationSharedData() [73]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::~vector() [216]
+-----------------------------------------------
+                0.00    0.00     900/900         void std::_Destroy<MES::element>(MES::element*) [66]
+[65]     0.0    0.00    0.00     900         void std::destroy_at<MES::element>(MES::element*) [65]
+                0.00    0.00     900/288900      MES::element::~element() [50]
+-----------------------------------------------
+                0.00    0.00     900/900         void std::_Destroy<MES::element*>(MES::element*, MES::element*) [68]
+[66]     0.0    0.00    0.00     900         void std::_Destroy<MES::element>(MES::element*) [66]
+                0.00    0.00     900/900         void std::destroy_at<MES::element>(MES::element*) [65]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::grid::~grid() [64]
+[67]     0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::~vector() [67]
+                0.00    0.00       1/1           void std::_Destroy<MES::element*>(MES::element*, MES::element*) [68]
+                0.00    0.00       1/2           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() [179]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base() [201]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::~vector() [67]
+[68]     0.0    0.00    0.00       1         void std::_Destroy<MES::element*>(MES::element*, MES::element*) [68]
+                0.00    0.00     900/900         void std::_Destroy<MES::element>(MES::element*) [66]
+-----------------------------------------------
+                0.00    0.00      20/20          main [1]
+[69]     0.0    0.00    0.00      20         MES::grid::clearGlobalMatrices() [69]
+                0.00    0.00      60/360060      MES::Matrix::operator=(std::initializer_list<double>) [20]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::grid::grid() [71]
+[70]     0.0    0.00    0.00       1         MES::simulationSharedData::simulationSharedData() [70]
+                0.00    0.00       3/6090207     MES::Matrix::Matrix(unsigned long, unsigned long, double) [11]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[71]     0.0    0.00    0.00       1         MES::grid::grid() [71]
+                0.00    0.00       1/1           MES::simulationSharedData::simulationSharedData() [70]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::vector() [220]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::vector() [215]
+-----------------------------------------------
+                0.00    0.00      20/20          main [1]
+[72]     0.0    0.00    0.00      20         MES::Matrix::operator=(MES::Matrix const&) [72]
+                0.00    0.00      20/1728020     double* std::copy<double*, double*>(double*, double*, double*) [36]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::grid::~grid() [64]
+[73]     0.0    0.00    0.00       1         MES::simulationSharedData::~simulationSharedData() [73]
+                0.00    0.00       3/9848627     MES::Matrix::~Matrix() [24]
+-----------------------------------------------
+                0.00    0.00 1008120/7104120     MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.00    0.00 1737600/7104120     std::initializer_list<double>::end() const [82]
+                0.00    0.00 4358400/7104120     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+[77]     0.0    0.00    0.00 7104120         std::initializer_list<double>::size() const [77]
+-----------------------------------------------
+                0.00    0.00  360060/3552060     MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.00    0.00 1454400/3552060     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+                0.00    0.00 1737600/3552060     std::initializer_list<double>::end() const [82]
+[78]     0.0    0.00    0.00 3552060         std::initializer_list<double>::begin() const [78]
+-----------------------------------------------
+                0.00    0.00 3475200/3475200     double* std::copy<double const*, double*>(double const*, double const*, double*) [25]
+[79]     0.0    0.00    0.00 3475200         double const* std::__miter_base<double const*>(double const*) [79]
+-----------------------------------------------
+                0.00    0.00 3456040/3456040     double* std::copy<double*, double*>(double*, double*, double*) [36]
+[80]     0.0    0.00    0.00 3456040         double* std::__miter_base<double*>(double*) [80]
+-----------------------------------------------
+                0.00    0.00 3456000/3456000     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[81]     0.0    0.00    0.00 3456000         std::array<MES::Matrix, 4ul>::operator[](unsigned long) [81]
+-----------------------------------------------
+                0.00    0.00  288000/1737600     MES::Matrix::operator=(std::initializer_list<double>) [20]
+                0.00    0.00 1449600/1737600     MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [21]
+[82]     0.0    0.00    0.00 1737600         std::initializer_list<double>::end() const [82]
+                0.00    0.00 1737600/3552060     std::initializer_list<double>::begin() const [78]
+                0.00    0.00 1737600/7104120     std::initializer_list<double>::size() const [77]
+-----------------------------------------------
+                0.00    0.00 1737600/1737600     double* std::copy<double const*, double*>(double const*, double const*, double*) [25]
+[83]     0.0    0.00    0.00 1737600         double* std::__copy_move_a2<false, double const*, double const*, double*>(double const*, double const*, double*) [83]
+-----------------------------------------------
+                0.00    0.00 1728020/1728020     double* std::copy<double*, double*>(double*, double*, double*) [36]
+[84]     0.0    0.00    0.00 1728020         double* std::__copy_move_a2<false, double*, double*, double*>(double*, double*, double*) [84]
+-----------------------------------------------
+                0.00    0.00   10800/1234800     MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00 1224000/1234800     MES::element::aggregateToGlobal() [26]
+[85]     0.0    0.00    0.00 1234800         std::array<int, 4ul>::operator[](unsigned long) [85]
+-----------------------------------------------
+                0.00    0.00       3/1152003     MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00 1152000/1152003     calc_dN_dxdy(MES::Jakobian, MES::node) [8]
+[86]     0.0    0.00    0.00 1152003         MES::Matrix::operator=(MES::Matrix&&) [86]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dEta::NMatrix(double) [33]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dEta::N1(MES::node) [94]
+[87]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dEta::N1(double) [87]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dEta::NMatrix(double) [33]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dEta::N2(MES::node) [95]
+[88]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dEta::N2(double) [88]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dEta::NMatrix(double) [33]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dEta::N3(MES::node) [96]
+[89]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dEta::N3(double) [89]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N1(MES::node) [97]
+[90]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dKsi::N1(double) [90]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N2(MES::node) [98]
+[91]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dKsi::N2(double) [91]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N3(MES::node) [99]
+[92]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dKsi::N3(double) [92]
+-----------------------------------------------
+                0.00    0.00  288000/864000      MES::ShapeFunctions::dKsi::NMatrix(double) [43]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N4(MES::node) [100]
+[93]     0.0    0.00    0.00  864000         MES::ShapeFunctions::dKsi::N4(double) [93]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[94]     0.0    0.00    0.00  576000         MES::ShapeFunctions::dEta::N1(MES::node) [94]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dEta::N1(double) [87]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[95]     0.0    0.00    0.00  576000         MES::ShapeFunctions::dEta::N2(MES::node) [95]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dEta::N2(double) [88]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[96]     0.0    0.00    0.00  576000         MES::ShapeFunctions::dEta::N3(MES::node) [96]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dEta::N3(double) [89]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[97]     0.0    0.00    0.00  576000         MES::ShapeFunctions::dKsi::N1(MES::node) [97]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N1(double) [90]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[98]     0.0    0.00    0.00  576000         MES::ShapeFunctions::dKsi::N2(MES::node) [98]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N2(double) [91]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[99]     0.0    0.00    0.00  576000         MES::ShapeFunctions::dKsi::N3(MES::node) [99]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N3(double) [92]
+-----------------------------------------------
+                0.00    0.00  576000/576000      MES::Jakobian::Jakobian(MES::node, MES::element) [16]
+[100]    0.0    0.00    0.00  576000         MES::ShapeFunctions::dKsi::N4(MES::node) [100]
+                0.00    0.00  576000/864000      MES::ShapeFunctions::dKsi::N4(double) [93]
+-----------------------------------------------
+                0.00    0.00  297600/297600      MES::ShapeFunctions::NMatrix(double, double) [41]
+[101]    0.0    0.00    0.00  297600         MES::ShapeFunctions::N1(double, double) [101]
+-----------------------------------------------
+                0.00    0.00  297600/297600      MES::ShapeFunctions::NMatrix(double, double) [41]
+[102]    0.0    0.00    0.00  297600         MES::ShapeFunctions::N2(double, double) [102]
+-----------------------------------------------
+                0.00    0.00  297600/297600      MES::ShapeFunctions::NMatrix(double, double) [41]
+[103]    0.0    0.00    0.00  297600         MES::ShapeFunctions::N3(double, double) [103]
+-----------------------------------------------
+                0.00    0.00  297600/297600      MES::ShapeFunctions::NMatrix(double, double) [41]
+[104]    0.0    0.00    0.00  297600         MES::ShapeFunctions::N4(double, double) [104]
+-----------------------------------------------
+                0.00    0.00  288000/288000      MES::element::calculateMatrices() [4]
+[105]    0.0    0.00    0.00  288000         MES::IntegrationPoint::getWeight(int, int) [105]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_M_head(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [108]
+[106]    0.0    0.00    0.00  288000         std::_Head_base<0ul, MES::Matrix, false>::_M_head(std::_Head_base<0ul, MES::Matrix, false>&) [106]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::_Tuple_impl<1ul, MES::Matrix>::_M_head(std::_Tuple_impl<1ul, MES::Matrix>&) [109]
+[107]    0.0    0.00    0.00  288000         std::_Head_base<1ul, MES::Matrix, false>::_M_head(std::_Head_base<1ul, MES::Matrix, false>&) [107]
+-----------------------------------------------
+                0.00    0.00  288000/288000      MES::Matrix& std::__get_helper<0ul, MES::Matrix, MES::Matrix>(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [110]
+[108]    0.0    0.00    0.00  288000         std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_M_head(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [108]
+                0.00    0.00  288000/288000      std::_Head_base<0ul, MES::Matrix, false>::_M_head(std::_Head_base<0ul, MES::Matrix, false>&) [106]
+-----------------------------------------------
+                0.00    0.00  288000/288000      MES::Matrix& std::__get_helper<1ul, MES::Matrix>(std::_Tuple_impl<1ul, MES::Matrix>&) [111]
+[109]    0.0    0.00    0.00  288000         std::_Tuple_impl<1ul, MES::Matrix>::_M_head(std::_Tuple_impl<1ul, MES::Matrix>&) [109]
+                0.00    0.00  288000/288000      std::_Head_base<1ul, MES::Matrix, false>::_M_head(std::_Head_base<1ul, MES::Matrix, false>&) [107]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::tuple_element<0ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<0ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&) [112]
+[110]    0.0    0.00    0.00  288000         MES::Matrix& std::__get_helper<0ul, MES::Matrix, MES::Matrix>(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [110]
+                0.00    0.00  288000/288000      std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_M_head(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [108]
+-----------------------------------------------
+                0.00    0.00  288000/288000      std::tuple_element<1ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<1ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&) [113]
+[111]    0.0    0.00    0.00  288000         MES::Matrix& std::__get_helper<1ul, MES::Matrix>(std::_Tuple_impl<1ul, MES::Matrix>&) [111]
+                0.00    0.00  288000/288000      std::_Tuple_impl<1ul, MES::Matrix>::_M_head(std::_Tuple_impl<1ul, MES::Matrix>&) [109]
+-----------------------------------------------
+                0.00    0.00  288000/288000      MES::element::calculateMatrices() [4]
+[112]    0.0    0.00    0.00  288000         std::tuple_element<0ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<0ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&) [112]
+                0.00    0.00  288000/288000      MES::Matrix& std::__get_helper<0ul, MES::Matrix, MES::Matrix>(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [110]
+-----------------------------------------------
+                0.00    0.00  288000/288000      MES::element::calculateMatrices() [4]
+[113]    0.0    0.00    0.00  288000         std::tuple_element<1ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<1ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&) [113]
+                0.00    0.00  288000/288000      MES::Matrix& std::__get_helper<1ul, MES::Matrix>(std::_Tuple_impl<1ul, MES::Matrix>&) [111]
+-----------------------------------------------
+                0.00    0.00    9600/9600        MES::element::calculateBoundaryCondition() [23]
+[114]    0.0    0.00    0.00    9600         MES::IntegrationPoint::getForSide(int, int, int) [114]
+-----------------------------------------------
+                0.00    0.00    9600/9600        MES::element::calculateBoundaryCondition() [23]
+[115]    0.0    0.00    0.00    9600         MES::IntegrationPoint::getWeightForSide(int, int) [115]
+-----------------------------------------------
+                0.00    0.00    4800/4800        MES::element::calculateBoundaryCondition() [23]
+[116]    0.0    0.00    0.00    4800         __gnu_cxx::__promote_2<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0))), std::__is_integer<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0)))>::__value>::__type std::pow<double, int>(double, int) [116]
+-----------------------------------------------
+                0.00    0.00       1/4688        std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+                0.00    0.00       2/4688        std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long) [214]
+                0.00    0.00       4/4688        std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const [184]
+                0.00    0.00    4681/4688        std::vector<MES::node, std::allocator<MES::node> >::operator[](unsigned long) [118]
+[117]    0.0    0.00    0.00    4688         std::vector<MES::node, std::allocator<MES::node> >::size() const [117]
+-----------------------------------------------
+                0.00    0.00    4681/4681        MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+[118]    0.0    0.00    0.00    4681         std::vector<MES::node, std::allocator<MES::node> >::operator[](unsigned long) [118]
+                0.00    0.00    4681/4688        std::vector<MES::node, std::allocator<MES::node> >::size() const [117]
+-----------------------------------------------
+                0.00    0.00       1/3601        std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+                0.00    0.00    3600/3601        std::vector<MES::element, std::allocator<MES::element> >::operator[](unsigned long) [120]
+[119]    0.0    0.00    0.00    3601         std::vector<MES::element, std::allocator<MES::element> >::size() const [119]
+-----------------------------------------------
+                0.00    0.00    3600/3600        MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+[120]    0.0    0.00    0.00    3600         std::vector<MES::element, std::allocator<MES::element> >::operator[](unsigned long) [120]
+                0.00    0.00    3600/3601        std::vector<MES::element, std::allocator<MES::element> >::size() const [119]
+-----------------------------------------------
+                0.00    0.00     900/1861        _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_ [61]
+                0.00    0.00     961/1861        void std::_Construct<MES::node>(MES::node*) [123]
+[121]    0.0    0.00    0.00    1861         operator new(unsigned long, void*) [121]
+-----------------------------------------------
+                0.00    0.00     961/961         void std::_Construct<MES::node>(MES::node*) [123]
+[122]    0.0    0.00    0.00     961         MES::node::node() [122]
+-----------------------------------------------
+                0.00    0.00     961/961         MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [209]
+[123]    0.0    0.00    0.00     961         void std::_Construct<MES::node>(MES::node*) [123]
+                0.00    0.00     961/1861        operator new(unsigned long, void*) [121]
+                0.00    0.00     961/961         MES::node::node() [122]
+-----------------------------------------------
+                0.00    0.00      20/920         main [1]
+                0.00    0.00     900/920         std::vector<MES::element, std::allocator<MES::element> >::back() [128]
+[124]    0.0    0.00    0.00     920         std::vector<MES::element, std::allocator<MES::element> >::end() [124]
+-----------------------------------------------
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::empty() const [127]
+[125]    0.0    0.00    0.00     900         std::vector<MES::element, std::allocator<MES::element> >::end() const [125]
+-----------------------------------------------
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::empty() const [127]
+[126]    0.0    0.00    0.00     900         std::vector<MES::element, std::allocator<MES::element> >::begin() const [126]
+-----------------------------------------------
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::back() [128]
+[127]    0.0    0.00    0.00     900         std::vector<MES::element, std::allocator<MES::element> >::empty() const [127]
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::end() const [125]
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::begin() const [126]
+-----------------------------------------------
+                0.00    0.00     900/900         MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&) [60]
+[128]    0.0    0.00    0.00     900         std::vector<MES::element, std::allocator<MES::element> >::back() [128]
+                0.00    0.00     900/900         std::vector<MES::element, std::allocator<MES::element> >::empty() const [127]
+                0.00    0.00     900/920         std::vector<MES::element, std::allocator<MES::element> >::end() [124]
+-----------------------------------------------
+                0.00    0.00       1/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [188]
+                0.00    0.00       1/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+                0.00    0.00       1/219         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       3/219         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       6/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) [160]
+                0.00    0.00       8/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [154]
+                0.00    0.00      17/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [142]
+                0.00    0.00     182/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const [137]
+[129]    0.0    0.00    0.00     219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+-----------------------------------------------
+                0.00    0.00       1/209         std::vector<MES::element, std::allocator<MES::element> >::_S_max_size(std::allocator<MES::element> const&) [217]
+                0.00    0.00       4/209         std::vector<MES::node, std::allocator<MES::node> >::_S_max_size(std::allocator<MES::node> const&) [170]
+                0.00    0.00     204/209         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const [131]
+[130]    0.0    0.00    0.00     209         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [130]
+-----------------------------------------------
+                0.00    0.00       4/204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const [169]
+                0.00    0.00       9/204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [165]
+                0.00    0.00     191/204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const [132]
+[131]    0.0    0.00    0.00     204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const [131]
+                0.00    0.00     204/209         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [130]
+-----------------------------------------------
+                0.00    0.00       9/191         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::length() const [147]
+                0.00    0.00     182/191         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+[132]    0.0    0.00    0.00     191         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const [132]
+                0.00    0.00     191/204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const [131]
+-----------------------------------------------
+                0.00    0.00       3/185         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [175]
+                0.00    0.00     182/185         std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*) [138]
+[133]    0.0    0.00    0.00     185         std::char_traits<char>::length(char const*) [133]
+-----------------------------------------------
+                0.00    0.00     182/182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+[134]    0.0    0.00    0.00     182         std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const [134]
+                0.00    0.00     182/182         std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*) [138]
+                0.00    0.00     182/182         std::basic_string_view<char, std::char_traits<char> >::starts_with(std::basic_string_view<char, std::char_traits<char> >) const [135]
+-----------------------------------------------
+                0.00    0.00     182/182         std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const [134]
+[135]    0.0    0.00    0.00     182         std::basic_string_view<char, std::char_traits<char> >::starts_with(std::basic_string_view<char, std::char_traits<char> >) const [135]
+                0.00    0.00     139/139         std::char_traits<char>::compare(char const*, char const*, unsigned long) [140]
+-----------------------------------------------
+                0.00    0.00      13/182         main [1]
+                0.00    0.00     169/182         MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+[136]    0.0    0.00    0.00     182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+                0.00    0.00     182/191         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const [132]
+                0.00    0.00     182/182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const [137]
+                0.00    0.00     182/182         std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*, unsigned long) [139]
+                0.00    0.00     182/182         std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const [134]
+-----------------------------------------------
+                0.00    0.00     182/182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+[137]    0.0    0.00    0.00     182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const [137]
+                0.00    0.00     182/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+-----------------------------------------------
+                0.00    0.00     182/182         std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const [134]
+[138]    0.0    0.00    0.00     182         std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*) [138]
+                0.00    0.00     182/185         std::char_traits<char>::length(char const*) [133]
+-----------------------------------------------
+                0.00    0.00     182/182         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [136]
+[139]    0.0    0.00    0.00     182         std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*, unsigned long) [139]
+-----------------------------------------------
+                0.00    0.00     139/139         std::basic_string_view<char, std::char_traits<char> >::starts_with(std::basic_string_view<char, std::char_traits<char> >) const [135]
+[140]    0.0    0.00    0.00     139         std::char_traits<char>::compare(char const*, char const*, unsigned long) [140]
+-----------------------------------------------
+                0.00    0.00      20/20          main [1]
+[141]    0.0    0.00    0.00      20         std::vector<MES::element, std::allocator<MES::element> >::begin() [141]
+-----------------------------------------------
+                0.00    0.00       4/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const [169]
+                0.00    0.00      13/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [145]
+[142]    0.0    0.00    0.00      17         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [142]
+                0.00    0.00      17/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+                0.00    0.00      17/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [143]
+-----------------------------------------------
+                0.00    0.00      17/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [142]
+[143]    0.0    0.00    0.00      17         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [143]
+                0.00    0.00      17/17          std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&) [144]
+-----------------------------------------------
+                0.00    0.00      17/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [143]
+[144]    0.0    0.00    0.00      17         std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&) [144]
+-----------------------------------------------
+                0.00    0.00       4/13          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+                0.00    0.00       9/13          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [153]
+[145]    0.0    0.00    0.00      13         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [145]
+                0.00    0.00      13/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [142]
+                0.00    0.00       6/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) [160]
+-----------------------------------------------
+                0.00    0.00       6/12          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) [160]
+                0.00    0.00       6/12          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [165]
+[146]    0.0    0.00    0.00      12         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() [146]
+-----------------------------------------------
+                0.00    0.00       1/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+                0.00    0.00       8/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+[147]    0.0    0.00    0.00       9         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::length() const [147]
+                0.00    0.00       9/191         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const [132]
+-----------------------------------------------
+                0.00    0.00       1/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [155]
+                0.00    0.00       8/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [154]
+[148]    0.0    0.00    0.00       9         std::char_traits<char>::assign(char&, char const&) [148]
+-----------------------------------------------
+                0.00    0.00       9/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [151]
+[149]    0.0    0.00    0.00       9         std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&) [149]
+-----------------------------------------------
+                0.00    0.00       9/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [153]
+[150]    0.0    0.00    0.00       9         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [150]
+-----------------------------------------------
+                0.00    0.00       1/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+                0.00    0.00       3/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [175]
+                0.00    0.00       5/9           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+[151]    0.0    0.00    0.00       9         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [151]
+                0.00    0.00       9/9           std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&) [149]
+-----------------------------------------------
+                0.00    0.00       1/9           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       8/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [154]
+[152]    0.0    0.00    0.00       9         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [152]
+-----------------------------------------------
+                0.00    0.00       2/9           MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00       2/9           MES::paraOutputWriter::~paraOutputWriter() [181]
+                0.00    0.00       5/9           main [1]
+[153]    0.0    0.00    0.00       9         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [153]
+                0.00    0.00       9/13          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [145]
+                0.00    0.00       9/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [150]
+-----------------------------------------------
+                0.00    0.00       3/8           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       5/8           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+[154]    0.0    0.00    0.00       8         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [154]
+                0.00    0.00       8/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [152]
+                0.00    0.00       8/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+                0.00    0.00       8/9           std::char_traits<char>::assign(char&, char const&) [148]
+-----------------------------------------------
+                0.00    0.00       1/8           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       3/8           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars<char const*>(char*, char const*, char const*) [174]
+                0.00    0.00       4/8           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+[155]    0.0    0.00    0.00       8         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [155]
+                0.00    0.00       7/7           std::char_traits<char>::copy(char*, char const*, unsigned long) [157]
+                0.00    0.00       1/9           std::char_traits<char>::assign(char&, char const&) [148]
+-----------------------------------------------
+                0.00    0.00       1/8           MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [228]
+                0.00    0.00       2/8           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       5/8           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+[156]    0.0    0.00    0.00       8         std::is_constant_evaluated() [156]
+-----------------------------------------------
+                0.00    0.00       7/7           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [155]
+[157]    0.0    0.00    0.00       7         std::char_traits<char>::copy(char*, char const*, unsigned long) [157]
+-----------------------------------------------
+                0.00    0.00       6/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) [160]
+[158]    0.0    0.00    0.00       6         std::__new_allocator<char>::deallocate(char*, unsigned long) [158]
+-----------------------------------------------
+                0.00    0.00       6/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) [162]
+[159]    0.0    0.00    0.00       6         std::__new_allocator<char>::allocate(unsigned long, void const*) [159]
+-----------------------------------------------
+                0.00    0.00       6/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [145]
+[160]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) [160]
+                0.00    0.00       6/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+                0.00    0.00       6/12          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() [146]
+                0.00    0.00       6/6           std::__new_allocator<char>::deallocate(char*, unsigned long) [158]
+-----------------------------------------------
+                0.00    0.00       1/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       1/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       4/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+[161]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_capacity(unsigned long) [161]
+-----------------------------------------------
+                0.00    0.00       6/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [165]
+[162]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) [162]
+                0.00    0.00       6/6           std::__new_allocator<char>::allocate(unsigned long, void const*) [159]
+-----------------------------------------------
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+                0.00    0.00       5/6           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+[163]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [163]
+-----------------------------------------------
+                0.00    0.00       1/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       1/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       4/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+[164]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data(char*) [164]
+-----------------------------------------------
+                0.00    0.00       1/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       1/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       4/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+[165]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [165]
+                0.00    0.00       9/204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const [131]
+                0.00    0.00       6/12          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() [146]
+                0.00    0.00       6/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) [162]
+-----------------------------------------------
+                0.00    0.00       1/5           main [1]
+                0.00    0.00       2/5           MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+                0.00    0.00       2/5           MES::paraOutputWriter::paraOutputWriter() [180]
+[166]    0.0    0.00    0.00       5         _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+                0.00    0.00       5/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [151]
+                0.00    0.00       5/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [163]
+                0.00    0.00       5/8           std::is_constant_evaluated() [156]
+                0.00    0.00       5/8           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [154]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<MES::node, std::allocator<MES::node> >::max_size() const [168]
+[167]    0.0    0.00    0.00       4         std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() const [167]
+-----------------------------------------------
+                0.00    0.00       2/4           std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const [184]
+                0.00    0.00       2/4           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[168]    0.0    0.00    0.00       4         std::vector<MES::node, std::allocator<MES::node> >::max_size() const [168]
+                0.00    0.00       4/4           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() const [167]
+                0.00    0.00       4/4           std::vector<MES::node, std::allocator<MES::node> >::_S_max_size(std::allocator<MES::node> const&) [170]
+-----------------------------------------------
+                0.00    0.00       4/4           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) [315]
+[169]    0.0    0.00    0.00       4         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const [169]
+                0.00    0.00       4/17          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [142]
+                0.00    0.00       4/204         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const [131]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<MES::node, std::allocator<MES::node> >::max_size() const [168]
+[170]    0.0    0.00    0.00       4         std::vector<MES::node, std::allocator<MES::node> >::_S_max_size(std::allocator<MES::node> const&) [170]
+                0.00    0.00       4/209         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [130]
+-----------------------------------------------
+                0.00    0.00       1/3           std::vector<MES::node, std::allocator<MES::node> >::~vector() [216]
+                0.00    0.00       2/3           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[171]    0.0    0.00    0.00       3         std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() [171]
+-----------------------------------------------
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [175]
+[172]    0.0    0.00    0.00       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&) [172]
+-----------------------------------------------
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [175]
+[173]    0.0    0.00    0.00       3         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [176]
+                0.00    0.00       3/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars<char const*>(char*, char const*, char const*) [174]
+                0.00    0.00       3/8           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [154]
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [177]
+                0.00    0.00       2/8           std::is_constant_evaluated() [156]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [165]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data(char*) [164]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_capacity(unsigned long) [161]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+[174]    0.0    0.00    0.00       3         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars<char const*>(char*, char const*, char const*) [174]
+                0.00    0.00       3/8           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [155]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[175]    0.0    0.00    0.00       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [175]
+                0.00    0.00       3/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [151]
+                0.00    0.00       3/3           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&) [172]
+                0.00    0.00       3/185         std::char_traits<char>::length(char const*) [133]
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+[176]    0.0    0.00    0.00       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [176]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [173]
+[177]    0.0    0.00    0.00       3         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [177]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+                0.00    0.00       1/2           std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base() [201]
+[178]    0.0    0.00    0.00       2         std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long) [178]
+                0.00    0.00       1/1           std::__new_allocator<MES::element>::deallocate(MES::element*, unsigned long) [204]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+                0.00    0.00       1/2           std::vector<MES::element, std::allocator<MES::element> >::~vector() [67]
+[179]    0.0    0.00    0.00       2         std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() [179]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[180]    0.0    0.00    0.00       1         MES::paraOutputWriter::paraOutputWriter() [180]
+                0.00    0.00       2/5           _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E [166]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[181]    0.0    0.00    0.00       1         MES::paraOutputWriter::~paraOutputWriter() [181]
+                0.00    0.00       2/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [153]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int) [223]
+[182]    0.0    0.00    0.00       1         int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [182]
+                0.00    0.00       1/1           __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::_Save_errno() [233]
+                0.00    0.00       1/1           __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Range_chk::_S_chk(long, std::integral_constant<bool, true>) [232]
+                0.00    0.00       1/1           __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::~_Save_errno() [234]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::max_size() const [186]
+[183]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() const [183]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[184]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const [184]
+                0.00    0.00       4/4688        std::vector<MES::node, std::allocator<MES::node> >::size() const [117]
+                0.00    0.00       2/4           std::vector<MES::node, std::allocator<MES::node> >::max_size() const [168]
+                0.00    0.00       1/1           unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [230]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+[185]    0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::capacity() const [185]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+[186]    0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::max_size() const [186]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::_S_max_size(std::allocator<MES::element> const&) [217]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() const [183]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+[187]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() const [187]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int) [223]
+[188]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [188]
+                0.00    0.00       1/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[189]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_allocate(unsigned long) [189]
+                0.00    0.00       1/1           std::__new_allocator<MES::node>::allocate(unsigned long, void const*) [203]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_base() [194]
+[190]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::_Vector_impl() [190]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl_data::_Vector_impl_data() [193]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base() [195]
+[191]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::~_Vector_impl() [191]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base() [195]
+[192]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_deallocate(MES::node*, unsigned long) [192]
+                0.00    0.00       1/1           std::__new_allocator<MES::node>::deallocate(MES::node*, unsigned long) [202]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::_Vector_impl() [190]
+[193]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl_data::_Vector_impl_data() [193]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::vector() [215]
+[194]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_base() [194]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::_Vector_impl() [190]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::~vector() [216]
+[195]    0.0    0.00    0.00       1         std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base() [195]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_deallocate(MES::node*, unsigned long) [192]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::~_Vector_impl() [191]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+[196]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_allocate(unsigned long) [196]
+                0.00    0.00       1/1           std::__new_allocator<MES::element>::allocate(unsigned long, void const*) [205]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_base() [200]
+[197]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::_Vector_impl() [197]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl_data::_Vector_impl_data() [199]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base() [201]
+[198]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::~_Vector_impl() [198]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::_Vector_impl() [197]
+[199]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl_data::_Vector_impl_data() [199]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::vector() [220]
+[200]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_base() [200]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::_Vector_impl() [197]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::~vector() [67]
+[201]    0.0    0.00    0.00       1         std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base() [201]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::~_Vector_impl() [198]
+                0.00    0.00       1/2           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long) [178]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_deallocate(MES::node*, unsigned long) [192]
+[202]    0.0    0.00    0.00       1         std::__new_allocator<MES::node>::deallocate(MES::node*, unsigned long) [202]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_allocate(unsigned long) [189]
+[203]    0.0    0.00    0.00       1         std::__new_allocator<MES::node>::allocate(unsigned long, void const*) [203]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long) [178]
+[204]    0.0    0.00    0.00       1         std::__new_allocator<MES::element>::deallocate(MES::element*, unsigned long) [204]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_allocate(unsigned long) [196]
+[205]    0.0    0.00    0.00       1         std::__new_allocator<MES::element>::allocate(unsigned long, void const*) [205]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [209]
+[206]    0.0    0.00    0.00       1         std::_UninitDestroyGuard<MES::node*, void>::release() [206]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [209]
+[207]    0.0    0.00    0.00       1         std::_UninitDestroyGuard<MES::node*, void>::_UninitDestroyGuard(MES::node*&) [207]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [209]
+[208]    0.0    0.00    0.00       1         std::_UninitDestroyGuard<MES::node*, void>::~_UninitDestroyGuard() [208]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [228]
+[209]    0.0    0.00    0.00       1         MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [209]
+                0.00    0.00     961/961         void std::_Construct<MES::node>(MES::node*) [123]
+                0.00    0.00       1/1           std::_UninitDestroyGuard<MES::node*, void>::_UninitDestroyGuard(MES::node*&) [207]
+                0.00    0.00       1/1           std::_UninitDestroyGuard<MES::node*, void>::release() [206]
+                0.00    0.00       1/1           std::_UninitDestroyGuard<MES::node*, void>::~_UninitDestroyGuard() [208]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[210]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::_S_relocate(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [210]
+                0.00    0.00       1/1           MES::node* std::__relocate_a<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [224]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[211]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::_Guard_alloc(MES::node*, unsigned long, std::_Vector_base<MES::node, std::allocator<MES::node> >&) [211]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[212]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::~_Guard_alloc() [212]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long) [214]
+[213]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+                0.00    0.00       2/4           std::vector<MES::node, std::allocator<MES::node> >::max_size() const [168]
+                0.00    0.00       2/3           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() [171]
+                0.00    0.00       1/4688        std::vector<MES::node, std::allocator<MES::node> >::size() const [117]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const [184]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_allocate(unsigned long) [189]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::_Guard_alloc(MES::node*, unsigned long, std::_Vector_base<MES::node, std::allocator<MES::node> >&) [211]
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n_a<MES::node*, unsigned long, MES::node>(MES::node*, unsigned long, std::allocator<MES::node>&) [229]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_S_relocate(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [210]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::~_Guard_alloc() [212]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+[214]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long) [214]
+                0.00    0.00       2/4688        std::vector<MES::node, std::allocator<MES::node> >::size() const [117]
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::grid::grid() [71]
+[215]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::vector() [215]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_base() [194]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::grid::~grid() [64]
+[216]    0.0    0.00    0.00       1         std::vector<MES::node, std::allocator<MES::node> >::~vector() [216]
+                0.00    0.00       1/3           std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() [171]
+                0.00    0.00       1/1           void std::_Destroy<MES::node*>(MES::node*, MES::node*) [231]
+                0.00    0.00       1/1           std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base() [195]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::max_size() const [186]
+[217]    0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::_S_max_size(std::allocator<MES::element> const&) [217]
+                0.00    0.00       1/209         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [130]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+[218]    0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::_S_relocate(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [218]
+                0.00    0.00       1/1           MES::element* std::__relocate_a<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [225]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [58]
+[219]    0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long) [219]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::max_size() const [186]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::capacity() const [185]
+                0.00    0.00       1/3601        std::vector<MES::element, std::allocator<MES::element> >::size() const [119]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_allocate(unsigned long) [196]
+                0.00    0.00       1/2           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() [179]
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::_S_relocate(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [218]
+                0.00    0.00       1/2           std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long) [178]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::grid::grid() [71]
+[220]    0.0    0.00    0.00       1         std::vector<MES::element, std::allocator<MES::element> >::vector() [220]
+                0.00    0.00       1/1           std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_base() [200]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+[221]    0.0    0.00    0.00       1         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) [165]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data(char*) [164]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_capacity(unsigned long) [161]
+                0.00    0.00       1/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+                0.00    0.00       1/8           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [155]
+                0.00    0.00       1/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [152]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[222]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [222]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() const [187]
+                0.00    0.00       1/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [151]
+                0.00    0.00       1/9           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::length() const [147]
+                0.00    0.00       1/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&) [163]
+                0.00    0.00       1/219         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [129]
+                0.00    0.00       1/1           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [221]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[223]    0.0    0.00    0.00       1         std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int) [223]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [188]
+                0.00    0.00       1/1           int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [182]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_S_relocate(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [210]
+[224]    0.0    0.00    0.00       1         MES::node* std::__relocate_a<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [224]
+                0.00    0.00       1/1           MES::node* std::__relocate_a_1<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [226]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::element, std::allocator<MES::element> >::_S_relocate(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [218]
+[225]    0.0    0.00    0.00       1         MES::element* std::__relocate_a<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [225]
+                0.00    0.00       1/1           MES::element* std::__relocate_a_1<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [227]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::node* std::__relocate_a<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [224]
+[226]    0.0    0.00    0.00       1         MES::node* std::__relocate_a_1<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&) [226]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::element* std::__relocate_a<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [225]
+[227]    0.0    0.00    0.00       1         MES::element* std::__relocate_a_1<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&) [227]
+-----------------------------------------------
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n_a<MES::node*, unsigned long, MES::node>(MES::node*, unsigned long, std::allocator<MES::node>&) [229]
+[228]    0.0    0.00    0.00       1         MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [228]
+                0.00    0.00       1/8           std::is_constant_evaluated() [156]
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [209]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long) [213]
+[229]    0.0    0.00    0.00       1         MES::node* std::__uninitialized_default_n_a<MES::node*, unsigned long, MES::node>(MES::node*, unsigned long, std::allocator<MES::node>&) [229]
+                0.00    0.00       1/1           MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [228]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const [184]
+[230]    0.0    0.00    0.00       1         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [230]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<MES::node, std::allocator<MES::node> >::~vector() [216]
+[231]    0.0    0.00    0.00       1         void std::_Destroy<MES::node*>(MES::node*, MES::node*) [231]
+-----------------------------------------------
+                0.00    0.00       1/1           int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [182]
+[232]    0.0    0.00    0.00       1         __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Range_chk::_S_chk(long, std::integral_constant<bool, true>) [232]
+-----------------------------------------------
+                0.00    0.00       1/1           int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [182]
+[233]    0.0    0.00    0.00       1         __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::_Save_errno() [233]
+-----------------------------------------------
+                0.00    0.00       1/1           int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [182]
+[234]    0.0    0.00    0.00       1         __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::~_Save_errno() [234]
+-----------------------------------------------
+
+Index by function name
+
+   [8] calc_dN_dxdy(MES::Jakobian, MES::node) [82] std::initializer_list<double>::end() const [170] std::vector<MES::node, std::allocator<MES::node> >::_S_max_size(std::allocator<MES::node> const&)
+  [58] MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [77] std::initializer_list<double>::size() const [210] std::vector<MES::node, std::allocator<MES::node> >::_S_relocate(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+ [101] MES::ShapeFunctions::N1(double, double) [78] std::initializer_list<double>::begin() const [211] std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::_Guard_alloc(MES::node*, unsigned long, std::_Vector_base<MES::node, std::allocator<MES::node> >&)
+ [102] MES::ShapeFunctions::N2(double, double) [134] std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const [212] std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::~_Guard_alloc()
+ [103] MES::ShapeFunctions::N3(double, double) [135] std::basic_string_view<char, std::char_traits<char> >::starts_with(std::basic_string_view<char, std::char_traits<char> >) const [213] std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long)
+ [104] MES::ShapeFunctions::N4(double, double) [184] std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const [214] std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long)
+  [94] MES::ShapeFunctions::dEta::N1(MES::node) [117] std::vector<MES::node, std::allocator<MES::node> >::size() const [215] std::vector<MES::node, std::allocator<MES::node> >::vector()
+  [87] MES::ShapeFunctions::dEta::N1(double) [168] std::vector<MES::node, std::allocator<MES::node> >::max_size() const [216] std::vector<MES::node, std::allocator<MES::node> >::~vector()
+  [95] MES::ShapeFunctions::dEta::N2(MES::node) [125] std::vector<MES::element, std::allocator<MES::element> >::end() const [118] std::vector<MES::node, std::allocator<MES::node> >::operator[](unsigned long)
+  [88] MES::ShapeFunctions::dEta::N2(double) [119] std::vector<MES::element, std::allocator<MES::element> >::size() const [217] std::vector<MES::element, std::allocator<MES::element> >::_S_max_size(std::allocator<MES::element> const&)
+  [96] MES::ShapeFunctions::dEta::N3(MES::node) [126] std::vector<MES::element, std::allocator<MES::element> >::begin() const [218] std::vector<MES::element, std::allocator<MES::element> >::_S_relocate(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  [89] MES::ShapeFunctions::dEta::N3(double) [127] std::vector<MES::element, std::allocator<MES::element> >::empty() const [60] MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&)
+  [34] MES::ShapeFunctions::dEta::N4(MES::node) [185] std::vector<MES::element, std::allocator<MES::element> >::capacity() const [124] std::vector<MES::element, std::allocator<MES::element> >::end()
+  [28] MES::ShapeFunctions::dEta::N4(double) [186] std::vector<MES::element, std::allocator<MES::element> >::max_size() const [128] std::vector<MES::element, std::allocator<MES::element> >::back()
+  [32] MES::ShapeFunctions::dEta::NMatrix(MES::node) [142] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [141] std::vector<MES::element, std::allocator<MES::element> >::begin()
+  [33] MES::ShapeFunctions::dEta::NMatrix(double) [136] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const [219] std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long)
+  [97] MES::ShapeFunctions::dKsi::N1(MES::node) [143] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [220] std::vector<MES::element, std::allocator<MES::element> >::vector()
+  [90] MES::ShapeFunctions::dKsi::N1(double) [187] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() const [67] std::vector<MES::element, std::allocator<MES::element> >::~vector()
+  [98] MES::ShapeFunctions::dKsi::N2(MES::node) [137] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const [120] std::vector<MES::element, std::allocator<MES::element> >::operator[](unsigned long)
+  [91] MES::ShapeFunctions::dKsi::N2(double) [132] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const [160] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long)
+  [99] MES::ShapeFunctions::dKsi::N3(MES::node) [188] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const [145] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+  [92] MES::ShapeFunctions::dKsi::N3(double) [147] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::length() const [161] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_capacity(unsigned long)
+ [100] MES::ShapeFunctions::dKsi::N4(MES::node) [129] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [162] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long)
+  [93] MES::ShapeFunctions::dKsi::N4(double) [169] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const [163] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&)
+  [42] MES::ShapeFunctions::dKsi::NMatrix(MES::node) [131] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const [172] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
+  [43] MES::ShapeFunctions::dKsi::NMatrix(double) [106] std::_Head_base<0ul, MES::Matrix, false>::_M_head(std::_Head_base<0ul, MES::Matrix, false>&) [150] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider()
+  [40] MES::ShapeFunctions::NMatrix(MES::node) [47] std::_Head_base<0ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [221] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long)
+  [41] MES::ShapeFunctions::NMatrix(double, double) [55] std::_Head_base<0ul, MES::Matrix, false>::~_Head_base() [173] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+ [114] MES::IntegrationPoint::getForSide(int, int, int) [107] std::_Head_base<1ul, MES::Matrix, false>::_M_head(std::_Head_base<1ul, MES::Matrix, false>&) [151] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data()
+ [115] MES::IntegrationPoint::getWeightForSide(int, int) [48] std::_Head_base<1ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&) [154] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  [29] MES::IntegrationPoint::get(int, int) [56] std::_Head_base<1ul, MES::Matrix, false>::~_Head_base() [174] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars<char const*>(char*, char const*, char const*)
+ [105] MES::IntegrationPoint::getWeight(int, int) [108] std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_M_head(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&) [146] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator()
+ [180] MES::paraOutputWriter::paraOutputWriter() [39] std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&) [164] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data(char*)
+ [181] MES::paraOutputWriter::~paraOutputWriter() [53] std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl() [155] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
+  [70] MES::simulationSharedData::simulationSharedData() [109] std::_Tuple_impl<1ul, MES::Matrix>::_M_head(std::_Tuple_impl<1ul, MES::Matrix>&) [165] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
+  [73] MES::simulationSharedData::~simulationSharedData() [49] std::_Tuple_impl<1ul, MES::Matrix>::_Tuple_impl<MES::Matrix>(MES::Matrix&&) [152] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  [69] MES::grid::clearGlobalMatrices() [57] std::_Tuple_impl<1ul, MES::Matrix>::~_Tuple_impl() [222] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [71] MES::grid::grid()     [157] std::char_traits<char>::copy(char*, char const*, unsigned long) [175] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  [64] MES::grid::~grid()    [148] std::char_traits<char>::assign(char&, char const&) [166] _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E
+ [122] MES::node::node()     [133] std::char_traits<char>::length(char const*) [153] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+   [2] MES::gauss(MES::Matrix const&, MES::Matrix const&) [140] std::char_traits<char>::compare(char const*, char const*, unsigned long) [223] std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int)
+  [37] MES::Matrix::Matrix(MES::Matrix&&) [189] std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_allocate(unsigned long) [123] void std::_Construct<MES::node>(MES::node*)
+  [30] MES::Matrix::Matrix(MES::Matrix const&) [190] std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::_Vector_impl() [65] void std::destroy_at<MES::element>(MES::element*)
+  [11] MES::Matrix::Matrix(unsigned long, unsigned long, double) [191] std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::~_Vector_impl() [110] MES::Matrix& std::__get_helper<0ul, MES::Matrix, MES::Matrix>(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&)
+  [21] MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>) [192] std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_deallocate(MES::node*, unsigned long) [111] MES::Matrix& std::__get_helper<1ul, MES::Matrix>(std::_Tuple_impl<1ul, MES::Matrix>&)
+  [24] MES::Matrix::~Matrix() [193] std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl_data::_Vector_impl_data() [79] double const* std::__miter_base<double const*>(double const*)
+  [86] MES::Matrix::operator=(MES::Matrix&&) [171] std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() [80] double* std::__miter_base<double*>(double*)
+  [72] MES::Matrix::operator=(MES::Matrix const&) [194] std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_base() [224] MES::node* std::__relocate_a<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  [20] MES::Matrix::operator=(std::initializer_list<double>) [195] std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base() [225] MES::element* std::__relocate_a<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+   [3] MES::Matrix::operator[](unsigned long, unsigned long) [196] std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_allocate(unsigned long) [61] _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_
+  [19] MES::Matrix::operator*=(double) [197] std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::_Vector_impl() [83] double* std::__copy_move_a2<false, double const*, double const*, double*>(double const*, double const*, double*)
+  [14] MES::Matrix::operator+=(MES::Matrix const&) [198] std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::~_Vector_impl() [84] double* std::__copy_move_a2<false, double*, double*, double*>(double*, double*, double*)
+  [26] MES::element::aggregateToGlobal() [178] std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long) [226] MES::node* std::__relocate_a_1<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+   [4] MES::element::calculateMatrices() [199] std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl_data::_Vector_impl_data() [227] MES::element* std::__relocate_a_1<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  [23] MES::element::calculateBoundaryCondition() [179] std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() [156] std::is_constant_evaluated()
+  [27] MES::element::element(MES::element const&) [200] std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_base() [228] MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long)
+  [59] MES::element::element(MES::simulationSharedData&) [201] std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base() [229] MES::node* std::__uninitialized_default_n_a<MES::node*, unsigned long, MES::node>(MES::node*, unsigned long, std::allocator<MES::node>&)
+  [50] MES::element::~element() [202] std::__new_allocator<MES::node>::deallocate(MES::node*, unsigned long) [38] std::abs(double)
+  [16] MES::Jakobian::Jakobian(MES::node, MES::element) [203] std::__new_allocator<MES::node>::allocate(unsigned long, void const*) [112] std::tuple_element<0ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<0ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&)
+  [44] MES::Jakobian::Jakobian(MES::Jakobian const&) [204] std::__new_allocator<MES::element>::deallocate(MES::element*, unsigned long) [113] std::tuple_element<1ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<1ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&)
+  [51] MES::Jakobian::~Jakobian() [205] std::__new_allocator<MES::element>::allocate(unsigned long, void const*) [230] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+   [9] MES::operator/(MES::Matrix const&, double) [158] std::__new_allocator<char>::deallocate(char*, unsigned long) [130] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [15] MES::operator-(MES::Matrix const&, MES::Matrix const&) [159] std::__new_allocator<char>::allocate(unsigned long, void const*) [116] __gnu_cxx::__promote_2<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0))), std::__is_integer<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0)))>::__value>::__type std::pow<double, int>(double, int)
+   [7] MES::operator*(MES::Matrix const&, MES::Matrix const&) [138] std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*) [25] double* std::copy<double const*, double*>(double const*, double const*, double*)
+  [45] MES::operator*(MES::Matrix const&, double) [139] std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*, unsigned long) [36] double* std::copy<double*, double*>(double*, double*, double*)
+  [46] MES::operator*(double, MES::Matrix const&) [206] std::_UninitDestroyGuard<MES::node*, void>::release() [66] void std::_Destroy<MES::element>(MES::element*)
+  [10] MES::operator+(MES::Matrix const&, MES::Matrix const&) [207] std::_UninitDestroyGuard<MES::node*, void>::_UninitDestroyGuard(MES::node*&) [231] void std::_Destroy<MES::node*>(MES::node*, MES::node*)
+ [182] int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [208] std::_UninitDestroyGuard<MES::node*, void>::~_UninitDestroyGuard() [68] void std::_Destroy<MES::element*>(MES::element*, MES::element*)
+  [63] MES::Matrix::max() const [144] std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&) [12] void std::__fill_a1<double*, double>(double*, double*, double const&)
+  [62] MES::Matrix::min() const [149] std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&) [232] __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Range_chk::_S_chk(long, std::integral_constant<bool, true>)
+  [17] MES::Matrix::numCols() const [209] MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long) [233] __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::_Save_errno()
+  [22] MES::Matrix::numRows() const [52] std::array<MES::Matrix, 4ul>::~array() [234] __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::~_Save_errno()
+  [18] MES::Matrix::transpose() const [81] std::array<MES::Matrix, 4ul>::operator[](unsigned long) [176] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+   [5] MES::Matrix::operator[](unsigned long, unsigned long) const [35] std::array<MES::node*, 4ul>::operator[](unsigned long) [177] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+  [13] MES::Matrix::operator-() const [85] std::array<int, 4ul>::operator[](unsigned long) [121] operator new(unsigned long, void*)
+ [167] std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() const [31] std::tuple<MES::Matrix, MES::Matrix>::tuple<MES::Matrix, MES::Matrix>(MES::Matrix&&, MES::Matrix&&) [6] _init
+ [183] std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() const [54] std::tuple<MES::Matrix, MES::Matrix>::~tuple()

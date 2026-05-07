@@ -71,14 +71,10 @@ namespace MES {
     }
 
     const real_t& Matrix::operator[](size_t row, size_t col) const {
-    	assert(row < rows && col < cols);
-        assert(row >= 0 && col >= 0);
         return data[row * cols + col];
     }
 
     real_t& Matrix::operator[](size_t row, size_t col) {
-        assert(row < rows && col < cols);
-        assert(row >= 0 && col >= 0);
         return data[row * cols + col];
     }
 

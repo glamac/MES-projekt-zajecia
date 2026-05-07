@@ -1,0 +1,268 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 56.50     23.03    23.03 3429262468     0.00     0.00  MES::Matrix::operator[](unsigned long, unsigned long)
+ 29.59     35.10    12.06       20     0.60     1.72  MES::gauss(MES::Matrix const&, MES::Matrix const&)
+  5.10     37.18     2.08 207718147     0.00     0.00  MES::Matrix::operator[](unsigned long, unsigned long) const
+  4.73     39.11     1.93                             _init
+  1.23     39.61     0.50  6167067     0.00     0.00  void std::__fill_a1<double*, double>(double*, double*, double const&)
+  0.49     39.81     0.20       40     0.01     0.02  MES::operator/(MES::Matrix const&, double)
+  0.44     39.99     0.18  2025620     0.00     0.00  MES::operator*(MES::Matrix const&, MES::Matrix const&)
+  0.39     40.15     0.16 193983140     0.00     0.00  MES::Matrix::numCols() const
+  0.32     40.28     0.13   288040     0.00     0.00  MES::operator+(MES::Matrix const&, MES::Matrix const&)
+  0.20     40.36     0.08  6090207     0.00     0.00  MES::Matrix::Matrix(unsigned long, unsigned long, double)
+  0.17     40.43     0.07       40     0.00     0.01  MES::Matrix::operator-() const
+  0.10     40.47     0.04 26586740     0.00     0.00  MES::Matrix::numRows() const
+  0.07     40.50     0.03  9848627     0.00     0.00  MES::Matrix::~Matrix()
+  0.07     40.53     0.03  1737600     0.00     0.00  double* std::copy<double const*, double*>(double const*, double const*, double*)
+  0.07     40.56     0.03   868800     0.00     0.00  MES::Matrix::operator*=(double)
+  0.07     40.59     0.03   360060     0.00     0.00  MES::Matrix::operator=(std::initializer_list<double>)
+  0.05     40.61     0.02   864000     0.00     0.00  MES::ShapeFunctions::dEta::N4(double)
+  0.05     40.63     0.02   618000     0.00     0.00  MES::Matrix::operator+=(MES::Matrix const&)
+  0.05     40.65     0.02   288000     0.00     0.00  MES::IntegrationPoint::get(int, int)
+  0.05     40.67     0.02   288000     0.00     0.00  MES::Jakobian::Jakobian(MES::node, MES::element)
+  0.05     40.69     0.02    18000     0.00     0.00  MES::element::aggregateToGlobal()
+  0.04     40.70     0.02  1454400     0.00     0.00  MES::Matrix::Matrix(unsigned long, unsigned long, std::initializer_list<double>)
+  0.02     40.71     0.01  4755600     0.00     0.00  std::array<MES::node*, 4ul>::operator[](unsigned long)
+  0.02     40.72     0.01  1728020     0.00     0.00  double* std::copy<double*, double*>(double*, double*, double*)
+  0.02     40.73     0.01  1728000     0.00     0.00  MES::Matrix::Matrix(MES::Matrix const&)
+  0.02     40.74     0.01   576020     0.00     0.00  MES::Matrix::Matrix(MES::Matrix&&)
+  0.02     40.75     0.01   288000     0.00     0.00  MES::element::element(MES::element const&)
+  0.02     40.76     0.01   288000     0.00     0.00  std::tuple<MES::Matrix, MES::Matrix>::tuple<MES::Matrix, MES::Matrix>(MES::Matrix&&, MES::Matrix&&)
+  0.02     40.77     0.01    19200     0.00     0.00  std::abs(double)
+  0.00     40.77     0.00  7104120     0.00     0.00  std::initializer_list<double>::size() const
+  0.00     40.77     0.00  3552060     0.00     0.00  std::initializer_list<double>::begin() const
+  0.00     40.77     0.00  3475200     0.00     0.00  double const* std::__miter_base<double const*>(double const*)
+  0.00     40.77     0.00  3456040     0.00     0.00  double* std::__miter_base<double*>(double*)
+  0.00     40.77     0.00  3456000     0.00     0.00  std::array<MES::Matrix, 4ul>::operator[](unsigned long)
+  0.00     40.77     0.00  1737600     0.00     0.00  std::initializer_list<double>::end() const
+  0.00     40.77     0.00  1737600     0.00     0.00  double* std::__copy_move_a2<false, double const*, double const*, double*>(double const*, double const*, double*)
+  0.00     40.77     0.00  1728020     0.00     0.00  double* std::__copy_move_a2<false, double*, double*, double*>(double*, double*, double*)
+  0.00     40.77     0.00  1234800     0.00     0.00  std::array<int, 4ul>::operator[](unsigned long)
+  0.00     40.77     0.00  1152003     0.00     0.00  MES::Matrix::operator=(MES::Matrix&&)
+  0.00     40.77     0.00   873600     0.00     0.00  MES::Matrix::transpose() const
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dEta::N1(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dEta::N2(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dEta::N3(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N1(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N2(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N3(double)
+  0.00     40.77     0.00   864000     0.00     0.00  MES::ShapeFunctions::dKsi::N4(double)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N1(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N2(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N3(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dEta::N4(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N1(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N2(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N3(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::ShapeFunctions::dKsi::N4(MES::node)
+  0.00     40.77     0.00   576000     0.00     0.00  MES::Jakobian::~Jakobian()
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N1(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N2(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N3(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::N4(double, double)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::NMatrix(MES::node)
+  0.00     40.77     0.00   297600     0.00     0.00  MES::ShapeFunctions::NMatrix(double, double)
+  0.00     40.77     0.00   288900     0.00     0.00  MES::element::~element()
+  0.00     40.77     0.00   288000     0.00     0.00  calc_dN_dxdy(MES::Jakobian, MES::node)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dEta::NMatrix(MES::node)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dEta::NMatrix(double)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dKsi::NMatrix(MES::node)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::ShapeFunctions::dKsi::NMatrix(double)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::IntegrationPoint::getWeight(int, int)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::Jakobian::Jakobian(MES::Jakobian const&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<0ul, MES::Matrix, false>::_M_head(std::_Head_base<0ul, MES::Matrix, false>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<0ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<0ul, MES::Matrix, false>::~_Head_base()
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<1ul, MES::Matrix, false>::_M_head(std::_Head_base<1ul, MES::Matrix, false>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<1ul, MES::Matrix, false>::_Head_base<MES::Matrix>(MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Head_base<1ul, MES::Matrix, false>::~_Head_base()
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_M_head(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::_Tuple_impl<MES::Matrix, MES::Matrix, void>(MES::Matrix&&, MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>::~_Tuple_impl()
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<1ul, MES::Matrix>::_M_head(std::_Tuple_impl<1ul, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<1ul, MES::Matrix>::_Tuple_impl<MES::Matrix>(MES::Matrix&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::_Tuple_impl<1ul, MES::Matrix>::~_Tuple_impl()
+  0.00     40.77     0.00   288000     0.00     0.00  std::array<MES::Matrix, 4ul>::~array()
+  0.00     40.77     0.00   288000     0.00     0.00  std::tuple<MES::Matrix, MES::Matrix>::~tuple()
+  0.00     40.77     0.00   288000     0.00     0.00  MES::Matrix& std::__get_helper<0ul, MES::Matrix, MES::Matrix>(std::_Tuple_impl<0ul, MES::Matrix, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  MES::Matrix& std::__get_helper<1ul, MES::Matrix>(std::_Tuple_impl<1ul, MES::Matrix>&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::tuple_element<0ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<0ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&)
+  0.00     40.77     0.00   288000     0.00     0.00  std::tuple_element<1ul, std::tuple<MES::Matrix, MES::Matrix> >::type&& std::get<1ul, MES::Matrix, MES::Matrix>(std::tuple<MES::Matrix, MES::Matrix>&&)
+  0.00     40.77     0.00    19220     0.00     0.00  MES::operator*(MES::Matrix const&, double)
+  0.00     40.77     0.00    19220     0.00     0.00  MES::operator*(double, MES::Matrix const&)
+  0.00     40.77     0.00    18000     0.00     0.00  MES::element::calculateMatrices()
+  0.00     40.77     0.00    18000     0.00     0.00  MES::element::calculateBoundaryCondition()
+  0.00     40.77     0.00     9600     0.00     0.00  MES::IntegrationPoint::getForSide(int, int, int)
+  0.00     40.77     0.00     9600     0.00     0.00  MES::IntegrationPoint::getWeightForSide(int, int)
+  0.00     40.77     0.00     4800     0.00     0.00  __gnu_cxx::__promote_2<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0))), std::__is_integer<decltype (((__gnu_cxx::__promote_2<double, std::__is_integer<double>::__value>::__type)(0))+((__gnu_cxx::__promote_2<int, std::__is_integer<int>::__value>::__type)(0)))>::__value>::__type std::pow<double, int>(double, int)
+  0.00     40.77     0.00     4688     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::size() const
+  0.00     40.77     0.00     4681     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::operator[](unsigned long)
+  0.00     40.77     0.00     3601     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::size() const
+  0.00     40.77     0.00     3600     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::operator[](unsigned long)
+  0.00     40.77     0.00     1861     0.00     0.00  operator new(unsigned long, void*)
+  0.00     40.77     0.00      961     0.00     0.00  MES::node::node()
+  0.00     40.77     0.00      961     0.00     0.00  void std::_Construct<MES::node>(MES::node*)
+  0.00     40.77     0.00      920     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::end()
+  0.00     40.77     0.00      900     0.00     0.00  MES::element::element(MES::simulationSharedData&)
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::end() const
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::begin() const
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::empty() const
+  0.00     40.77     0.00      900     0.00     0.00  MES::element& std::vector<MES::element, std::allocator<MES::element> >::emplace_back<MES::simulationSharedData&>(MES::simulationSharedData&)
+  0.00     40.77     0.00      900     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::back()
+  0.00     40.77     0.00      900     0.00     0.00  void std::destroy_at<MES::element>(MES::element*)
+  0.00     40.77     0.00      900     0.00     0.00  _ZSt12construct_atIN3MES7elementEJRNS0_20simulationSharedDataEEQaant20is_unbounded_array_vIT_ErqXgsnwcvPvLi0E_S4_pispcl7declvalIT0_EEEEEPS4_S7_DpOS6_
+  0.00     40.77     0.00      900     0.00     0.00  void std::_Destroy<MES::element>(MES::element*)
+  0.00     40.77     0.00      219     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const
+  0.00     40.77     0.00      209     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     40.77     0.00      204     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size() const
+  0.00     40.77     0.00      191     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const
+  0.00     40.77     0.00      185     0.00     0.00  std::char_traits<char>::length(char const*)
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::starts_with(char const*) const
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::starts_with(std::basic_string_view<char, std::char_traits<char> >) const
+  0.00     40.77     0.00      182     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::starts_with(char const*) const
+  0.00     40.77     0.00      182     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*)
+  0.00     40.77     0.00      182     0.00     0.00  std::basic_string_view<char, std::char_traits<char> >::basic_string_view(char const*, unsigned long)
+  0.00     40.77     0.00      139     0.00     0.00  std::char_traits<char>::compare(char const*, char const*, unsigned long)
+  0.00     40.77     0.00       20     0.00     0.00  MES::grid::clearGlobalMatrices()
+  0.00     40.77     0.00       20     0.00     0.00  MES::Matrix::operator=(MES::Matrix const&)
+  0.00     40.77     0.00       20     0.00     0.01  MES::operator-(MES::Matrix const&, MES::Matrix const&)
+  0.00     40.77     0.00       20     0.00     0.00  MES::Matrix::max() const
+  0.00     40.77     0.00       20     0.00     0.00  MES::Matrix::min() const
+  0.00     40.77     0.00       20     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::begin()
+  0.00     40.77     0.00       17     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const
+  0.00     40.77     0.00       17     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const
+  0.00     40.77     0.00       17     0.00     0.00  std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
+  0.00     40.77     0.00       13     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+  0.00     40.77     0.00       12     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator()
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::length() const
+  0.00     40.77     0.00        9     0.00     0.00  std::char_traits<char>::assign(char&, char const&)
+  0.00     40.77     0.00        9     0.00     0.00  std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider()
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data()
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  0.00     40.77     0.00        9     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+  0.00     40.77     0.00        8     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  0.00     40.77     0.00        8     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
+  0.00     40.77     0.00        8     0.00     0.00  std::is_constant_evaluated()
+  0.00     40.77     0.00        7     0.00     0.00  std::char_traits<char>::copy(char*, char const*, unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__new_allocator<char>::deallocate(char*, unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__new_allocator<char>::allocate(unsigned long, void const*)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_capacity(unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char>&&)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data(char*)
+  0.00     40.77     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
+  0.00     40.77     0.00        5     0.00     0.00  _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EvQ26is_default_constructible_vIT1_E
+  0.00     40.77     0.00        4     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator() const
+  0.00     40.77     0.00        4     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::max_size() const
+  0.00     40.77     0.00        4     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const
+  0.00     40.77     0.00        4     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_S_max_size(std::allocator<MES::node> const&)
+  0.00     40.77     0.00        3     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_get_Tp_allocator()
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
+  0.00     40.77     0.00        3     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00     40.77     0.00        3     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars<char const*>(char*, char const*, char const*)
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  0.00     40.77     0.00        3     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+  0.00     40.77     0.00        2     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_deallocate(MES::element*, unsigned long)
+  0.00     40.77     0.00        2     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator()
+  0.00     40.77     0.00        1     0.00     0.00  MES::parseTextFile(MES::grid&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00     40.77     0.00        1     0.00     0.00  MES::paraOutputWriter::paraOutputWriter()
+  0.00     40.77     0.00        1     0.00     0.00  MES::paraOutputWriter::~paraOutputWriter()
+  0.00     40.77     0.00        1     0.00     0.00  MES::simulationSharedData::simulationSharedData()
+  0.00     40.77     0.00        1     0.00     0.00  MES::simulationSharedData::~simulationSharedData()
+  0.00     40.77     0.00        1     0.00     0.00  MES::grid::grid()
+  0.00     40.77     0.00        1     0.00     0.00  MES::grid::~grid()
+  0.00     40.77     0.00        1     0.00     0.00  int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_get_Tp_allocator() const
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_M_check_len(unsigned long, char const*) const
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::capacity() const
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::max_size() const
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_get_allocator() const
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_allocate(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl::~_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_M_deallocate(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_impl_data::_Vector_impl_data()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::node, std::allocator<MES::node> >::~_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_M_allocate(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl::~_Vector_impl()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_impl_data::_Vector_impl_data()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::_Vector_base<MES::element, std::allocator<MES::element> >::~_Vector_base()
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::node>::deallocate(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::node>::allocate(unsigned long, void const*)
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::element>::deallocate(MES::element*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::__new_allocator<MES::element>::allocate(unsigned long, void const*)
+  0.00     40.77     0.00        1     0.00     0.00  std::_UninitDestroyGuard<MES::node*, void>::release()
+  0.00     40.77     0.00        1     0.00     0.00  std::_UninitDestroyGuard<MES::node*, void>::_UninitDestroyGuard(MES::node*&)
+  0.00     40.77     0.00        1     0.00     0.00  std::_UninitDestroyGuard<MES::node*, void>::~_UninitDestroyGuard()
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__uninitialized_default_n_1<false>::__uninit_default_n<MES::node*, unsigned long>(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_S_relocate(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::_Guard_alloc(MES::node*, unsigned long, std::_Vector_base<MES::node, std::allocator<MES::node> >&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_Guard_alloc::~_Guard_alloc()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::_M_default_append(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::resize(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::vector()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::node, std::allocator<MES::node> >::~vector()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::_S_max_size(std::allocator<MES::element> const&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::_S_relocate(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::reserve(unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::vector()
+  0.00     40.77     0.00        1     0.00     0.00  std::vector<MES::element, std::allocator<MES::element> >::~vector()
+  0.00     40.77     0.00        1     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     40.77     0.00        1     0.00     0.00  std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__relocate_a<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::element* std::__relocate_a<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__relocate_a_1<MES::node*, MES::node*, std::allocator<MES::node> >(MES::node*, MES::node*, MES::node*, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::element* std::__relocate_a_1<MES::element*, MES::element*, std::allocator<MES::element> >(MES::element*, MES::element*, MES::element*, std::allocator<MES::element>&)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__uninitialized_default_n<MES::node*, unsigned long>(MES::node*, unsigned long)
+  0.00     40.77     0.00        1     0.00     0.00  MES::node* std::__uninitialized_default_n_a<MES::node*, unsigned long, MES::node>(MES::node*, unsigned long, std::allocator<MES::node>&)
+  0.00     40.77     0.00        1     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     40.77     0.00        1     0.00     0.00  void std::_Destroy<MES::node*>(MES::node*, MES::node*)
+  0.00     40.77     0.00        1     0.00     0.00  void std::_Destroy<MES::element*>(MES::element*, MES::element*)
+  0.00     40.77     0.00        1     0.00     0.00  __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Range_chk::_S_chk(long, std::integral_constant<bool, true>)
+  0.00     40.77     0.00        1     0.00     0.00  __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::_Save_errno()
+  0.00     40.77     0.00        1     0.00     0.00  __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)::_Save_errno::~_Save_errno()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2025 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

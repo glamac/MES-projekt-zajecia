@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "MESCore.hpp"
+#include "MESData.h"
 #include "MESTypes.hpp"
 #include "MESMatrix.hpp"
 #include <getopt.h>
@@ -10,7 +11,7 @@
 #include "paraOutputWriter.hpp"
 
 void printUsage() {
-	std::cout << "Usage: messim [-ip 2|3|4] [-o <outFileName> [-p]] <gridFile>";
+	std::cout << "Usage: messim [-ip 2|3|4] [-o <outFileName> [-p]] <gridFile>\n";
 	exit(-1);
 }
 
@@ -32,6 +33,9 @@ int main(int argc, char* argv[]) {
     	std::string arg = argv[i];
      	if(arg.starts_with("-ip") || arg.starts_with("--integration-points")) {
       		int integration_points = std::stoi(argv[++i]);
+        	if(integration_points < 2 || integration_points > 4) {
+       		printUsage(); exit(-1);
+         }
        		SimulationGrid.simData.integrationPoints_Boundary = integration_points;
        		SimulationGrid.simData.integrationPoints_Surface = integration_points;
     	}
@@ -78,11 +82,11 @@ int main(int argc, char* argv[]) {
 	     		.calculateBoundaryCondition()
 	     		.aggregateToGlobal();
 	    }
+		// std::cout << "Rozwiązanie stacjonarne: \n" << MES::gauss(GLOB.H, GLOB.vP).transpose() << '\n';
 
         auto Hg_Cg_dt = (GLOB.H + GLOB.C / stepTime);
         auto Pg_Cg_dt_t0 = -1 * (-(GLOB.C / stepTime) * t0 - GLOB.vP );
         auto t1 = MES::gauss(Hg_Cg_dt, Pg_Cg_dt_t0);
-        // auto t1 = MES::gauss(a, b);
         (*output) << "t: " << time << "s\t";
         (*output) << "min: " << t1.min() << " max: " << t1.max() << '\n';
         // std::cout << "[H]+[C]/d: " << a << '\n';

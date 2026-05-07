@@ -1,7 +1,6 @@
 #include "MESCore.hpp"
 #include "MESCalculus.hpp"
 #include "MESShapeFunctions.hpp"
-#include "MESTypes.hpp"
 #include <cmath>
 
 std::tuple<MES::Matrix, MES::Matrix> calc_dN_dxdy(MES::Jakobian Jak, MES::node pc) {
@@ -40,11 +39,12 @@ MES::element& MES::element::calculateMatrices() {
 	H = {0}; C = {0};
 
 	for(int i = 0; i < numPoints*numPoints; i++) {
+		// printf("Licze punkt %i z %i\n", i, numPoints*numPoints);
 		auto iPoint = MIP::get(i);
 		auto pWeight = MIP::getWeight(i);
 		auto Jak = MES::Jakobian(iPoint, thisElement);
 		auto [dNdx, dNdy] = calc_dN_dxdy(Jak, iPoint);
-		// TODO: cache this and do not recalculate each time god damn...
+
 		Matrix NMatrix = MSF::NMatrix(iPoint);
 
 		const real_t weight = (pWeight.x * pWeight.y);
@@ -79,6 +79,7 @@ MES::element& MES::element::calculateBoundaryCondition() {
 		Matrix H_BC_i(4, 4, {0});
 		Matrix vP_i(4, 1, {0});
 		for(int j = 0; j < numPoints; j++) {
+			// printf("Licze punkt %i z %i\n", j, numPoints);
 			auto iPoint = MIP::getForSide(j, i);
 			auto weight = MIP::getWeightForSide(j);
 			auto NMatrix = MSF::NMatrix(iPoint);

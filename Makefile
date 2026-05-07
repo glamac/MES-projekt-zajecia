@@ -8,8 +8,8 @@ OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 DEPS := $(OBJS:.o=.d)
 INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
-CPPFLAGS := $(INC_FLAGS) -MMD -MP -std=c++23 -fPIC -g
-LDFLAGS := $(shell pkg-config --static --libs glfw3) -fPIE -pie -g
+CPPFLAGS := $(INC_FLAGS) -MMD -MP -std=c++23 -fPIC -O3
+LDFLAGS := $(shell pkg-config --static --libs glfw3) -fPIE -no-pie
 
 $(BUILD_DIR)/$(TARGET): $(OBJS)
 	$(CXX) $(OBJS) -o $@ $(LDFLAGS)
